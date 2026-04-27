@@ -443,12 +443,13 @@
 		/obj/item/device/flash = 5,
 		/obj/item/reagent_container/food/snacks/donut/normal = 12,
 		/obj/item/storage/box/evidence = 6,
-		/obj/item/clothing/head/helmet/marine/MP = 6,
+		/obj/item/clothing/head/helmet/marine/MP/provost/marshal = 2, //SS220 EDIT
 		/obj/item/clothing/head/beret/marine/mp/mppeaked = 6,
 		/obj/item/clothing/head/beret/marine/mp/mpcap = 6,
-		/obj/item/clothing/under/marine/mp = 2,
-		/obj/item/storage/belt/security/MP = 6,
+		/obj/item/clothing/under/marine/mp/provost/mp = 2, //SS220 EDIT
+		/obj/item/storage/belt/security/MP = 3, //SS220 EDIT
 		/obj/item/clothing/head/beret/marine/mp = 6,
+		/obj/item/clothing/accessory/armband/mp = 2, //SS220 EDIT
 		/obj/item/clothing/glasses/sunglasses/sechud = 3,
 		/obj/item/device/radio/headset = 6,
 		/obj/item/tape/regulation = 5,
@@ -473,9 +474,10 @@
 		/obj/item/ammo_magazine/pistol/mod88/rubber = 40,
 		/obj/item/ammo_magazine/rifle/rubber = 40,
 		/obj/item/ammo_magazine/rifle/m4ra/rubber = 40,
-		/obj/item/clothing/head/helmet/marine/MP = 8,
+		/obj/item/clothing/under/marine/mp/provost/mp = 8, //SS220 EDIT
 		/obj/item/explosive/plastic/breaching_charge/rubber = 6,
 		/obj/item/clothing/glasses/mgoggles/mp_riot_shield = 15,
+		/obj/item/clothing/shoes/marine/knife = 8 //SS220 EDIT
 	)
 
 /obj/structure/machinery/vending/sea

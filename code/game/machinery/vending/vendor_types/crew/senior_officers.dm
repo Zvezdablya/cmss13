@@ -36,12 +36,13 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_chief, list(
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
-		list("CMP Uniform", 0, /obj/item/clothing/under/marine/officer/warrant, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY),
+		list("CMP Uniform", 0, /obj/item/clothing/under/marine/mp/provost/cmp, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 		list("Laceup", 0, /obj/item/clothing/shoes/laceup, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 
 		list("ARMOR (TAKE ALL)", 0, null, null, null),
 		list("Ceramic Plate", 0, /obj/item/clothing/accessory/health/ceramic_plate, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 		list("CMP Beret", 0, /obj/item/clothing/head/beret/marine/mp/cmp, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
 
 		list("HANDGUN CASE (CHOOSE 1)", 0, null, null, null),
 		list("88 mod 4 Combat Pistol Case", 0, /obj/item/storage/box/guncase/mod88, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
@@ -68,9 +69,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_chief, list(
 		list("Gas Mask", 0, /obj/item/clothing/mask/gas, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", 0, /obj/item/clothing/mask/rebreather/scarf, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 		list("Rebreather", 0, /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
-
-		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
 
 		list("Spare Equipment", 0, null, null, null),
 		list("Officer's Headset", 15, /obj/item/device/radio/headset/almayer/mmpo, null, VENDOR_ITEM_REGULAR),
@@ -554,9 +552,9 @@ GLOBAL_LIST_INIT(cm_vending_clothing_auxiliary_officer, list(
 
 /obj/effect/essentials_set/chiefmilitarypolice
 	spawned_gear_list = list(
-		/obj/item/clothing/glasses/sunglasses/sechud,
-		/obj/item/storage/belt/security/MP/full,
-		/obj/item/clothing/head/helmet/marine/MP/WO,
+		/obj/item/storage/box/zipcuffs/small, //SS220 EDIT start
+		/obj/item/storage/pouch/tools/tactical/sec/full,
+		/obj/item/clothing/head/helmet/marine/MP/provost/marshal, //SS220 EDIT end
 	)
 
 /obj/effect/essentials_set/xoformal

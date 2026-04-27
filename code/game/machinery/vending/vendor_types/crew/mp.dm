@@ -7,11 +7,12 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Uniform", 0, /obj/item/clothing/under/marine/mp/provost/mp, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY), //SS220 EDIT
-		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
+		list("Laceup", 0, /obj/item/clothing/shoes/laceup, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 
 		list("ARMOR (TAKE ALL)", 0, null, null, null),
 		list("Ceramic Plate", 0, /obj/item/clothing/accessory/health/ceramic_plate, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 		list("MP Beret", 0, /obj/item/clothing/head/beret/marine/mp, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
+		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
 
 		list("HANDGUN CASE (CHOOSE 1)", 0, null, null, null),
 		list("88 mod 4 Combat Pistol Case", 0, /obj/item/storage/box/guncase/mod88, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
@@ -26,7 +27,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 		list("M276 General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("Medium General Pouch", 0, /obj/item/storage/pouch/general/medium, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR), //SS220 EDIT
 		list("First-Aid Pouch (Refillable Autoinjectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
@@ -37,9 +38,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 		list("Gas Mask", 0, /obj/item/clothing/mask/gas, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", 0, /obj/item/clothing/mask/rebreather/scarf, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 		list("Rebreather", 0, /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
-
-		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
 	))
 
 /obj/structure/machinery/cm_vending/clothing/military_police
@@ -60,7 +58,8 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Warden Uniform", 0, /obj/item/clothing/under/marine/mp/provost/mw, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY), //SS220 EDIT
-		list("Marine Combat Boots", 0, /obj/item/clothing/shoes/marine/knife, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY),
+		list("Laceup", 0, /obj/item/clothing/shoes/laceup, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY), //SS220 EDIT
+		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
 
 		list("ARMOR (TAKE ALL)", 0, null, null, null),
 		list("Ceramic Plate", 0, /obj/item/clothing/accessory/health/ceramic_plate, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY), //SS220 EDIT
@@ -79,7 +78,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 		list("M276 General Revolver Holster Rig", 0, /obj/item/storage/belt/gun/m44, MARINE_CAN_BUY_BELT, VENDOR_ITEM_REGULAR),
 
 		list("POUCHES (CHOOSE 2)", 0, null, null, null),
-		list("Medium General Pouch", 0, /obj/item/storage/pouch/general/medium, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR),
+		list("Large General Pouch", 0, /obj/item/storage/pouch/general/large, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_REGULAR), //SS220 EDIT
 		list("First-Aid Pouch (Refillable Autoinjectors)", 0, /obj/item/storage/pouch/firstaid/full, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Splints, Gauze, Ointment)", 0, /obj/item/storage/pouch/firstaid/full/alternate, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
 		list("First-Aid Pouch (Pill Packets)", 0, /obj/item/storage/pouch/firstaid/full/pills, MARINE_CAN_BUY_POUCH, VENDOR_ITEM_RECOMMENDED),
@@ -90,9 +89,6 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
 		list("Gas Mask", 0, /obj/item/clothing/mask/gas, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 		list("Heat Absorbent Coif", 0, /obj/item/clothing/mask/rebreather/scarf, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
 		list("Rebreather", 0, /obj/item/clothing/mask/rebreather, MARINE_CAN_BUY_MASK, VENDOR_ITEM_REGULAR),
-
-		list("ACCESSORIES (CHOOSE 1)", 0, null, null, null),
-		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
 	))
 
 /obj/structure/machinery/cm_vending/clothing/military_police_warden
