@@ -9,6 +9,7 @@
 /datum/equipment_preset/uscm_ship/uscm_police/mp
 	name = "USCM Military Police (MP)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
+	idtype = /obj/item/card/id/provost //SS220 EDIT
 
 	access = list(
 		ACCESS_MARINE_BRIG,
@@ -48,23 +49,21 @@
 		back_item = /obj/item/storage/backpack/security
 
 	new_human.equip_to_slot_or_del(new headset_item(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/mp(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/MP(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/mp/provost/mp(new_human), WEAR_BODY) //SS220 EDIT start
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	if(new_human.disabilities & NEARSIGHTED)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/prescription(new_human), WEAR_EYES)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud(new_human), WEAR_EYES)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/mp(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_L_STORE)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/medium(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large, WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mp(new_human), WEAR_ACCESSORY) //SS220 EDIT end
 
 /datum/equipment_preset/uscm_ship/uscm_police/mp/honorguard
 	name = "USCM Military Police Honor Guard (MPHG)"
 	flags = EQUIPMENT_PRESET_EXTRA
+	idtype = /obj/item/card/id/provost //SS220 EDIT
 
 	assignment = JOB_POLICE_HG
 	job_title = JOB_POLICE_HG
@@ -82,7 +81,7 @@
 /datum/equipment_preset/uscm_ship/uscm_police/warden
 	name = "USCM Military Warden (MW)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	idtype = /obj/item/card/id/silver
+	idtype = /obj/item/card/id/provost //SS220 EDIT
 
 	access = list(
 		ACCESS_MARINE_BRIG,
@@ -123,26 +122,23 @@
 		back_item = /obj/item/storage/backpack/security
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/mw(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/warden(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/MP/warden(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/mp/provost/mw(new_human), WEAR_BODY) //SS220 EDIT start
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	if(new_human.disabilities & NEARSIGHTED)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/prescription(new_human), WEAR_EYES)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud(new_human), WEAR_EYES)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/mp/warden(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mp(new_human), WEAR_ACCESSORY) //SS220 EDIT end
 
 //*****************************************************************************************************/
 
 /datum/equipment_preset/uscm_ship/uscm_police/cmp
 	name = "USCM Chief MP (CMP)"
 	flags = EQUIPMENT_PRESET_START_OF_ROUND|EQUIPMENT_PRESET_MARINE
-	idtype = /obj/item/card/id/silver
+	idtype = /obj/item/card/id/provost //SS220 EDIT
 
 	access = list(
 		ACCESS_MARINE_BRIG,
@@ -186,20 +182,17 @@
 	if (new_human.client && new_human.client.prefs && (new_human.client.prefs.backbag == 1))
 		back_item = /obj/item/storage/backpack/security
 
-	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/cmp(new_human), WEAR_L_EAR)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/officer/warrant(new_human), WEAR_BODY)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/marine/knife(new_human), WEAR_FEET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine(new_human), WEAR_HANDS)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/belt/security/MP/full(new_human), WEAR_WAIST)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/marine/MP/WO(new_human), WEAR_JACKET)
+	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/almayer/mcom/cmp(new_human), WEAR_L_EAR) //SS220 EDIT start
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/under/marine/mp/provost/cmp(new_human), WEAR_BODY)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/laceup(new_human), WEAR_FEET)
 	if(new_human.disabilities & NEARSIGHTED)
 		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud/prescription(new_human), WEAR_EYES)
 	else
-		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/sechud(new_human), WEAR_EYES)
+		new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/sunglasses/big(new_human), WEAR_EYES)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/beret/marine/mp/cmp(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new back_item(new_human), WEAR_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/device/taperecorder(new_human), WEAR_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/general/large(new_human), WEAR_R_STORE)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/armband/mp(new_human), WEAR_ACCESSORY) //SS220 EDIT end
 
 
 //*****************************************************************************************************/
@@ -208,7 +201,7 @@
 	name = "USCM Riot MP (RMP)"
 	flags = EQUIPMENT_PRESET_EXTRA|EQUIPMENT_PRESET_MARINE
 
-	idtype = /obj/item/card/id/silver
+	idtype = /obj/item/card/id/provost //SS220 EDIT
 	access = list()
 	assignment = JOB_RIOT
 	job_title = JOB_RIOT

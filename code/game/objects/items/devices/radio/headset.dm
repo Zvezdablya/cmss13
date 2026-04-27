@@ -523,7 +523,7 @@
 	name = "marine military police radio headset"
 	desc = "This is used by marine military police members. Channels are as follows: :p - military police, :v - marine command. :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad."
 	icon_state = "sec_headset"
-	additional_hud_types = list(MOB_HUD_FACTION_CMB)
+	additional_hud_types = list(MOB_HUD_FACTION_CMB, MOB_HUD_SECURITY_ADVANCED, MOB_HUD_FACTION_WY) //SS220 EDIT
 	initial_keys = list(/obj/item/device/encryptionkey/almayer, /obj/item/device/encryptionkey/mmpo)
 	frequency = SEC_FREQ
 	locate_setting = TRACKER_CMP
@@ -539,7 +539,7 @@
 	desc = "This is used by members of the marine honor guard. Channels are as follows: :p - military police, :v - marine command. :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad."
 	icon_state = "sec_headset"
 	initial_keys = list(/obj/item/device/encryptionkey/almayer, /obj/item/device/encryptionkey/mmpo)
-	additional_hud_types = list(MOB_HUD_FACTION_CMB)
+	additional_hud_types = list(MOB_HUD_FACTION_CMB, MOB_HUD_SECURITY_ADVANCED, MOB_HUD_FACTION_WY) //SS220 EDIT
 	frequency = SEC_FREQ
 	volume = RADIO_VOLUME_RAISED
 	locate_setting = TRACKER_CO
@@ -645,7 +645,7 @@
 	name = "marine Military Warden radio headset"
 	desc = "It seems oddly similar to the CMPs'... Smells like donuts too. Channels are as follows: :v - marine command, :p - military police, :n - engineering, :m - medbay, :u - requisitions, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad."
 	icon_state = "sec_headset"
-	additional_hud_types = list(MOB_HUD_FACTION_CMB, MOB_HUD_FACTION_WY)
+	additional_hud_types = list(MOB_HUD_FACTION_CMB, MOB_HUD_SECURITY_ADVANCED, MOB_HUD_FACTION_WY) //SS220 EDIT
 	initial_keys = list(/obj/item/device/encryptionkey/almayer, /obj/item/device/encryptionkey/cmpcom)
 	frequency = SEC_FREQ
 	locate_setting = TRACKER_CMP
@@ -660,7 +660,7 @@
 	name = "marine chief MP radio headset"
 	desc = "For discussing the purchase of donuts and arresting of hooligans. Channels are as follows: :v - marine command, :p - military police, :n - engineering, :m - medbay, :u - requisitions, :a - alpha squad, :b - bravo squad, :c - charlie squad, :d - delta squad."
 	icon_state = "sec_headset"
-	additional_hud_types = list(MOB_HUD_FACTION_CMB, MOB_HUD_FACTION_WY)
+	additional_hud_types = list(MOB_HUD_FACTION_CMB, MOB_HUD_SECURITY_ADVANCED, MOB_HUD_FACTION_WY) //SS220 EDIT
 	initial_keys = list(/obj/item/device/encryptionkey/almayer, /obj/item/device/encryptionkey/cmpcom)
 	frequency = SEC_FREQ
 	locate_setting = TRACKER_CO

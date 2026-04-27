@@ -1,9 +1,9 @@
 
 //Anti-riot team
 /datum/emergency_call/riot
-	name = "USCM Riot Control"
+	name = "USCM Military Police Riot Control" //SS220 EDIT
 	mob_max = 10
-	mob_min = 5
+	mob_min = 3 //SS220 EDIT
 	objectives = "Обеспечьте восстановление порядка и соблюдение законов."
 	probability = 0
 

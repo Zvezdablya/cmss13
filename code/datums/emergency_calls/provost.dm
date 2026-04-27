@@ -3,7 +3,7 @@
 /datum/emergency_call/provost_enforcer
 	name = "USCM Provost Enforcers"
 	mob_max = 5
-	mob_min = 5
+	mob_min = 1 //SS220 EDIT
 	probability = 0
 
 /datum/emergency_call/provost_enforcer/New()

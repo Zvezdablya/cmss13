@@ -205,13 +205,14 @@
 
 /datum/equipment_preset/uscm_event/provost/enforcer
 	name = "Provost Enforcer"
+	idtype = /obj/item/card/id/provost //220 EDIT
 	assignment = JOB_PROVOST_ENFORCER
 	job_title = JOB_PROVOST_ENFORCER
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME6 = JOB_PLAYTIME_TIER_1, PAY_SHORT_ME7 = JOB_PLAYTIME_TIER_3)
 	role_comm_title = "PvE"
 	flags = EQUIPMENT_PRESET_EXTRA
 	minimap_icon = "pve"
-	
+
 	dress_under = list(/obj/item/clothing/under/marine/dress/blues)
 	dress_over = list(/obj/item/clothing/suit/storage/jacket/marine/dress/blues)
 	dress_hat = list(/obj/item/clothing/head/marine/dress_cover)
@@ -249,6 +250,7 @@
 /datum/equipment_preset/uscm_event/provost/tml
 	name = "Provost Team Leader"
 	skills = /datum/skills/CMP
+	idtype = /obj/item/card/id/provost //SS220 EDIT
 	assignment = JOB_PROVOST_TML
 	job_title = JOB_PROVOST_TML
 	paygrades = list(PAY_SHORT_ME8 = JOB_PLAYTIME_TIER_0, PAY_SHORT_ME9 = JOB_PLAYTIME_TIER_3)
