@@ -2,17 +2,18 @@
 
 GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 		list("POLICE SET (MANDATORY)", 0, null, null, null),
-		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Uniform", 0, /obj/item/clothing/under/marine/mp/provost/mp, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 		list("Laceup", 0, /obj/item/clothing/shoes/laceup, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY), //SS220 EDIT
+		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 
 		list("ARMOR (TAKE ALL)", 0, null, null, null),
-		list("Ceramic Plate", 0, /obj/item/clothing/accessory/health/ceramic_plate, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY), //SS220 EDIT
+		list("Ceramic Plate", 0, /obj/item/clothing/accessory/health/ceramic_plate, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
+		list("Service jacket", 0, /obj/item/clothing/suit/storage/jacket/marine/service/mp/prov, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 		list("MP Beret", 0, /obj/item/clothing/head/beret/marine/mp, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
-		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
 
 		list("HANDGUN CASE (CHOOSE 1)", 0, null, null, null),
 		list("88 mod 4 Combat Pistol Case", 0, /obj/item/storage/box/guncase/mod88, MARINE_CAN_BUY_SECONDARY, VENDOR_ITEM_MANDATORY),
@@ -52,17 +53,19 @@ GLOBAL_LIST_INIT(cm_vending_clothing_military_police, list(
 //------------ Warden CLOTHING VENDOR---------------
 
 GLOBAL_LIST_INIT(cm_vending_clothing_military_police_warden, list(
-		list("POLICE SET (MANDATORY)", 0, null, null, null),
-		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
+		list("POLICE SET (RECOMMENDED)", 0, null, null, null),
+		list("Essential Police Set", 0, /obj/effect/essentials_set/police, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_RECOMMENDED),
 
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Gloves", 0, /obj/item/clothing/gloves/marine, MARINE_CAN_BUY_GLOVES, VENDOR_ITEM_MANDATORY),
 		list("Warden Uniform", 0, /obj/item/clothing/under/marine/mp/provost/mw, MARINE_CAN_BUY_UNIFORM, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 		list("Laceup", 0, /obj/item/clothing/shoes/laceup, MARINE_CAN_BUY_SHOES, VENDOR_ITEM_MANDATORY), //SS220 EDIT
-		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_RECOMMENDED), //SS220 EDIT
+		list("MP armband", 0, /obj/item/clothing/accessory/armband/mp, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 
 		list("ARMOR (TAKE ALL)", 0, null, null, null),
-		list("Ceramic Plate", 0, /obj/item/clothing/accessory/health/ceramic_plate, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY), //SS220 EDIT
+		list("Ceramic Plate", 0, /obj/item/clothing/accessory/health/ceramic_plate, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_RECOMMENDED),
+		list("M3 Warden armor", 0, /obj/item/clothing/suit/storage/marine/MP/provost/light/flexi/mw, MARINE_CAN_BUY_ACCESSORY, VENDOR_ITEM_MANDATORY), //SS220 EDIT
+		list("Service jacket", 0, /obj/item/clothing/suit/storage/jacket/marine/service/warden/prov, MARINE_CAN_BUY_ARMOR, VENDOR_ITEM_MANDATORY), //SS220 EDIT
 		list("Warden Peaked Cap", 0, /obj/item/clothing/head/beret/marine/mp/warden, MARINE_CAN_BUY_HELMET, VENDOR_ITEM_MANDATORY),
 
 		list("HANDGUN CASE (CHOOSE 1)", 0, null, null, null),

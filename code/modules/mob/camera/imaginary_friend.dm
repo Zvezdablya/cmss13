@@ -22,7 +22,7 @@
 	var/datum/action/innate/imaginary_orbit/orbit
 	var/datum/action/innate/imaginary_hide/hide
 
-	var/list/outfit_choices = list(/datum/equipment_preset/uscm_ship/sea)
+	var/list/outfit_choices = list(/datum/equipment_preset/uscm_ship/sea, /datum/equipment_preset/uscm_event/provost/inspector/advisor) //220 EDIT
 
 	var/list/current_huds = list()
 
