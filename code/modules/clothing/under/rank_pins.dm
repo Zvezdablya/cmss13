@@ -161,6 +161,9 @@
 ################ ARMY  #####################
 ################################################*/
 
+// Comented out until someone adds the faction file.
+
+/*
 //ENLISTED
 /obj/item/clothing/accessory/ranks/army/e1
 	rank_short = PAY_SHORT_AE1
@@ -227,7 +230,7 @@
 	icon_state = "ranks_chiefwarrant"
 
 //OFFICERS
-/obj/item/clothing/accessory/ranks/army/o1
+/obj/item/clothing/accessory/army/o1
 	name = "officer rank pins"
 	rank_short = PAY_SHORT_AO1
 	icon_state = "ranks_o1"
@@ -287,11 +290,17 @@
 	rank_short = PAY_SHORT_AO10
 	icon_state = "ranks_o10"
 
+/obj/item/clothing/accessory/ranks/army/o10c
+	name = "officer rank pins"
+	rank_short = PAY_SHORT_AO10C
+	icon_state = "ranks_o10"
+
 /obj/item/clothing/accessory/ranks/army/o10s
 	name = "officer rank pins"
 	rank_short = PAY_SHORT_AO10S
 	icon_state = "ranks_o11"
 
+*/
 
 /*################################################
 ################ NAVY  #####################

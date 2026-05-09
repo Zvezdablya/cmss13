@@ -183,7 +183,7 @@
 
 /obj/item/holder/rat/pet/marvin
 	name = "Marvin"
-	desc = "A sleek well kept rat with a tiny collar around it's neck, it must belong to someone. For a rodent it appears remarkably clean and hygienic."
+	desc = "A sleek well kept rat with a tiny collar around it's neck, it must belong to someone. For a rodent it appears remarkably clean and hygenic."
 	icon_state = "rat_black"
 
 /obj/item/holder/rat/pet/ikit

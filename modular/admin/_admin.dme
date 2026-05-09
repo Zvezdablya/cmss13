@@ -2,4 +2,3 @@
 
 #include "code/check_new_players.dm"
 #include "code/offline_timed_ban.dm"
-#include "code/stickyban_overrides.dm"

@@ -159,7 +159,8 @@
 					to_chat(user, SPAN_WARNING("[W] needs to be fully charged before it can be stored in [src]."))
 					return
 			if(length(item_box.contents) < item_box.num_of_magazines)
-				user.drop_inv_item_to_loc(W, item_box)
+				user.drop_inv_item_to_loc(W, src)
+				item_box.contents += W
 				to_chat(user, SPAN_NOTICE("You put \a [W] into [src]"))
 				update_icon()
 			else

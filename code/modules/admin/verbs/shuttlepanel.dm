@@ -47,5 +47,5 @@
 
 		else
 			if(options[selection])
-				request(options[selection], force=TRUE)
+				request(options[selection])
 	message_admins("[usr] has manipulated [name || id ] with selection [selection]")

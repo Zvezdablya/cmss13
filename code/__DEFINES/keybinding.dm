@@ -98,7 +98,6 @@
 #define COMSIG_KB_HUMAN_WEAPON_SHOTGUN_TUBE "keybinding_human_weapon_shotgun_tube"
 #define COMSIG_KB_HUMAN_WEAPON_TOGGLE_FRONTLINE_MODE "keybinding_human_weapon_toggle_frontline_mode"
 #define COMSIG_KB_HUMAN_WEAPON_TOGGLE_IFF "keybinding_human_weapon_toggle_iff"
-#define COMSIG_KB_HUMAN_WEAPON_TOGGLE_AIM_ASSIST "keybinding_human_weapon_toggle_aim_assist"
 
 //Living
 #define COMSIG_KB_SURGERY_INTENT_DOWN "keybinding_living_surgery_intent_down"
@@ -136,7 +135,6 @@
 #define COMSIG_KB_MOB_BLOCKMOVEMENT_DOWN "keybinding_mob_blockmovement_down"
 #define COMSIG_KB_MOB_LOOK_UP "keybinding_mob_look_up"
 #define COMSIG_KB_MOB_TOGGLE_MINIMAP "keybinding_toggle_minimap"
-#define COMSIG_KB_MOB_MANIFEST "keybinding_mob_manifest"
 
 //Robot
 #define COMSIG_KB_SILICON_TOGGLEMODULEONE_DOWN "keybinding_silicon_togglemoduleone_down"

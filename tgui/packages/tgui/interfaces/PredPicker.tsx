@@ -33,8 +33,6 @@ type PredData = {
 
   can_use_legacy: BooleanLike;
   use_legacy: string;
-  can_use_unique: BooleanLike;
-  use_unique: string;
   translator_type: string;
   invisibility_sound: string;
 
@@ -76,7 +74,6 @@ type PredData = {
   translators: string[];
   invisibility_sounds: string[];
   legacies: string[];
-  uniques: string[];
 };
 
 type ModalOptions =
@@ -224,8 +221,6 @@ const PredEquipment = (props: { readonly pick: (_: ModalOptions) => void }) => {
 
     can_use_legacy,
 
-    can_use_unique,
-
     translators,
     translator_type,
     invisibility_sounds,
@@ -233,9 +228,6 @@ const PredEquipment = (props: { readonly pick: (_: ModalOptions) => void }) => {
 
     legacies,
     use_legacy,
-
-    uniques,
-    use_unique,
   } = data;
 
   return (
@@ -374,20 +366,11 @@ const PredEquipment = (props: { readonly pick: (_: ModalOptions) => void }) => {
               />
             </LabeledList.Item>
             {!!can_use_legacy && (
-              <LabeledList.Item labelWrap label="Legacy Armor">
+              <LabeledList.Item labelWrap label="Legacy">
                 <Dropdown
                   options={legacies}
                   selected={use_legacy}
                   onSelected={(val) => act('legacy', { selected: val })}
-                />
-              </LabeledList.Item>
-            )}
-            {!!can_use_unique && (
-              <LabeledList.Item labelWrap label="Unique Armor">
-                <Dropdown
-                  options={uniques}
-                  selected={use_unique}
-                  onSelected={(val) => act('unique', { selected: val })}
                 />
               </LabeledList.Item>
             )}

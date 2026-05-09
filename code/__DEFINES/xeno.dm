@@ -744,9 +744,6 @@
 #define XENO_VISION_LEVEL_HIGH_NVG "Three Quarters Night Vision"
 #define XENO_VISION_LEVEL_FULL_NVG "Full Night Vision"
 
-// dancer defines
-#define DANCER_DODGE_TIME 7 SECONDS
-
 
 // drone fruits
 

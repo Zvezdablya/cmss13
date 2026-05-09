@@ -577,9 +577,8 @@
 /turf/open/asphalt/cement/cement1/north,
 /area/bigredv2/outside/space_port)
 "YX" = (
-/obj/structure/machinery/landinglight/delaythree{
-	dir = 8;
-	icon_state = "landingstripe"
+/obj/structure/machinery/landinglight/ds1/delaythree{
+	dir = 8
 	},
 /turf/open/floor/asteroidwarning/west,
 /area/bigredv2/outside/space_port)

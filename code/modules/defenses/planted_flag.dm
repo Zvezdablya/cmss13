@@ -31,6 +31,8 @@
 /obj/structure/machinery/defenses/planted_flag/Initialize()
 	. = ..()
 
+	RegisterSignal(src, COMSIG_ATOM_TURF_CHANGE, PROC_REF(turf_changed))
+
 	if(turned_on)
 		apply_area_effect()
 		start_processing()
@@ -102,9 +104,8 @@
 
 		apply_buff_to_player(H)
 
-// regenerate our bounds after we move
-/obj/structure/machinery/defenses/planted_flag/afterShuttleMove(turf/oldT, list/movement_force, shuttle_dir, shuttle_preferred_direction, move_dir, rotation)
-	. = ..()
+/obj/structure/machinery/defenses/planted_flag/proc/turf_changed()
+	SIGNAL_HANDLER
 	if(range_bounds)
 		QDEL_NULL(range_bounds)
 

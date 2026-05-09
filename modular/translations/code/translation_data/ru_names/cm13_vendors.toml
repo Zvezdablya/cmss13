@@ -318,6 +318,10 @@ tags = [ "nominative_only", "cm13",]
 nominative = "СТАЦИОНАРНЫЕ СИСТЕМЫ (ВОЗЬМИТЕ 1)"
 tags = [ "nominative_only", "cm13",]
 
+[barrel]
+nominative = "ДУЛЬНЫЕ УСТРОЙСТВА"
+tags = [ "nominative_only", "cm13",]
+
 [rail]
 nominative = "МОДУЛИ ДЛЯ ВЕРХНЕЙ ПЛАНКИ"
 tags = [ "nominative_only", "cm13",]
