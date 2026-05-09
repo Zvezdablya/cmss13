@@ -167,12 +167,6 @@
 
 ////////// Dancer Abilities
 
-/datum/action/xeno_action/activable/tail_stab/harpoon_tail
-	name = "Tail Lance"
-	action_icon_state = "tail_harpoon"
-	action_type = XENO_ACTION_CLICK
-	ability_primacy = XENO_TAIL_STAB
-
 /datum/action/xeno_action/activable/prae_impale
 	name = "Impale"
 	action_icon_state = "prae_impale"
@@ -181,9 +175,8 @@
 	action_type = XENO_ACTION_CLICK
 	xeno_cooldown = 13 SECONDS
 	plasma_cost = 80
-	var/range = 2
 
-	var/impale_click_miss_cooldown = 0.7 SECONDS
+	var/impale_click_miss_cooldown = 1.5 SECONDS
 
 /datum/action/xeno_action/onclick/prae_dodge
 	name = "Dodge"
@@ -191,12 +184,12 @@
 	macro_path = /datum/action/xeno_action/verb/verb_prae_dodge
 	ability_primacy = XENO_PRIMARY_ACTION_2
 	action_type = XENO_ACTION_CLICK
+	plasma_cost = 200
+	xeno_cooldown = 19 SECONDS
 
 	// Config
-	var/duration = DANCER_DODGE_TIME
-	var/dodge_timer = TIMER_ID_NULL
+	var/duration = 70
 	var/speed_buff_amount = 0.5
-	var/afterimage_interval = 1 DECISECONDS
 
 /datum/action/xeno_action/activable/prae_tail_trip
 	name = "Tail Trip"
@@ -207,7 +200,7 @@
 	xeno_cooldown = 13 SECONDS
 	plasma_cost = 30
 
-	var/tail_click_miss_cooldown = 0.7 SECONDS
+	var/tail_click_miss_cooldown = 1.5 SECONDS
 
 	// Config
 	var/range = 2

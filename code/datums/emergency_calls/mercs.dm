@@ -1,14 +1,16 @@
+
+
+
 //Randomly-equipped mercenaries. May be friendly or hostile to the USCM, hostile to xenos.
 /datum/emergency_call/mercs
 	name = "Freelancers (Squad)"
 	mob_max = 8
 	probability = 20
-	hostility = null // Random in New if null
+
 
 /datum/emergency_call/mercs/New()
 	. = ..()
-	if(isnull(hostility))
-		hostility = pick(75;FALSE,25;TRUE)
+	hostility = pick(75;FALSE,25;TRUE)
 	arrival_message = "[MAIN_SHIP_NAME], это шаттл \"Фрилансер\" [pick(GLOB.alphabet_lowercase)][pick(GLOB.alphabet_lowercase)]-[rand(1, 99)], реагируем на ваш сигнал бедствия. Приготовьтесь к высадке на ваш борт."
 	if(hostility)
 		objectives = "Разграбьте корабль [MAIN_SHIP_NAME] и убейте всех, кто встанет на вашем пути. Делайте то, что говорит ваш военачальник. Обеспечьте своё выживание любой ценой."
@@ -19,17 +21,27 @@
 	name = "Friendly Freelancers (Squad)"
 	mob_max = 8
 	probability = 0
+
+/datum/emergency_call/mercs/friendly/New()
+	. = ..()
 	hostility = FALSE
+	arrival_message = "[MAIN_SHIP_NAME], это шаттл \"Фрилансер\" [pick(GLOB.alphabet_lowercase)][pick(GLOB.alphabet_lowercase)]-[rand(1, 99)], реагируем на ваш сигнал бедствия. Приготовьтесь к высадке на ваш борт."
+	objectives = "Помогите экипажу корабля [MAIN_SHIP_NAME] в обмен на плату, тщательно подбирая размер вознаграждения. Делайте то, что говорит ваш военачальник. Обеспечьте своё выживание любой ценой."
 
 /datum/emergency_call/mercs/hostile //ditto
 	name = "Hostile Freelancers (Squad)"
 	mob_max = 8
 	probability = 0
+
+/datum/emergency_call/mercs/hostile/New()
+	. = ..()
 	hostility = TRUE
+	arrival_message = "[MAIN_SHIP_NAME], это шаттл \"Фрилансер\" [pick(GLOB.alphabet_lowercase)][pick(GLOB.alphabet_lowercase)]-[rand(1, 99)], реагируем на ваш сигнал бедствия. Приготовьтесь к высадке на ваш борт."
+	objectives = "Разграбьте корабль [MAIN_SHIP_NAME] и убейте всех, кто встанет на вашем пути. Делайте то, что говорит ваш военачальник. Обеспечьте своё выживание любой ценой."
 
 /datum/emergency_call/mercs/print_backstory(mob/living/carbon/human/H)
 	to_chat(H, SPAN_BOLD("You started off in the Neroid Sector as a colonist seeking work at one of the established colonies."))
-	to_chat(H, SPAN_BOLD("The withdrawal of United American forces in the early 2180s, the system fell into disarray."))
+	to_chat(H, SPAN_BOLD("The withdrawl of United American forces in the early 2180s, the system fell into disarray."))
 	to_chat(H, SPAN_BOLD("Taking up arms as a mercenary, the Freelancers have become a powerful force of order in the system."))
 	to_chat(H, SPAN_BOLD("While they are motivated primarily by money, many colonists see the Freelancers as the main forces of order in the Neroid Sector."))
 	if(hostility)
@@ -111,7 +123,7 @@
 
 /datum/emergency_call/heavy_mercs/print_backstory(mob/living/carbon/human/H)
 	to_chat(H, SPAN_BOLD("You started off in the Neroid Sector as an experienced miner seeking work at one of the established colonies."))
-	to_chat(H, SPAN_BOLD("The withdrawal of United American forces in the early 2180s, the system fell into disarray."))
+	to_chat(H, SPAN_BOLD("The withdrawl of United American forces in the early 2180s, the system fell into disarray."))
 	to_chat(H, SPAN_BOLD("Taking up arms as a mercenary, the Freelancers have become a powerful force of order in the system."))
 	to_chat(H, SPAN_BOLD("While they are motivated primarily by money, many colonists see the Freelancers as the main forces of order in the Neroid Sector."))
 	if(hostility)

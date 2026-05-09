@@ -10,7 +10,6 @@
 
 	icon = 'icons/obj/structures/doors/mineral_doors.dmi'
 	icon_state = "metal"
-	tiles_with = list(/turf/closed/wall/mineral)
 
 	var/mineralType = "metal"
 	var/open = FALSE
@@ -226,7 +225,6 @@
 	icon_state = "wood"
 	mineralType = "wood"
 	hardness = 1
-	tiles_with = list(/turf/closed/wall/mineral, /turf/closed/wall/wood)
 
 /obj/structure/mineral_door/wood/open()
 	isSwitchingStates = TRUE

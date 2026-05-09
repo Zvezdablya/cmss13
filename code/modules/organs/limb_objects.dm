@@ -134,8 +134,7 @@
 		overlays += lipstick
 
 	if(brainmob && brainmob.client)
-		brainmob.client.screen.Cut() //clear the hud
-		brainmob.client.render_plates_shown = alist()
+		brainmob.client.screen.len = null //clear the hud
 
 	transfer_identity(H)
 

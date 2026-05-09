@@ -5,7 +5,7 @@
 
 /datum/announcer
 	var/tts_seed = TTS_SEED_DEFAULT_ANNOUNCE
-	var/list/sound_effects = list()
+	var/sound_effect = SOUND_EFFECT_NONE
 	var/mob/ammouncer
 
 /datum/announcer/proc/Message(message, garbled_message, receivers, garbled_receivers)
@@ -18,32 +18,32 @@
 
 	if(ammouncer)
 		for(var/mob/M in receivers)
-			ammouncer.cast_tts(listener = M, message = message_tts, location = M, is_local = FALSE, additional_effects = sound_effects, traits = TTS_TRAIT_RATE_MEDIUM, tts_seed_override = tts_seed, tts_channel_override = CHANNEL_TTS_ANNOUNCEMENT)
+			ammouncer.cast_tts(M, message_tts, M, TTS_LOCALYZE_ANNOUNCE)
 		for(var/mob/M in garbled_receivers)
-			ammouncer.cast_tts(listener = M, message = garbled_message_tts, location = M, is_local = FALSE,, additional_effects = sound_effects, traits = TTS_TRAIT_RATE_MEDIUM, tts_seed_override = tts_seed, tts_channel_override = CHANNEL_TTS_ANNOUNCEMENT)
+			ammouncer.cast_tts(M, garbled_message_tts, M, TTS_LOCALYZE_ANNOUNCE)
 		return
 
 	for(var/mob/M in receivers)
-		SStts220.get_tts(speaker = M, listener = M, message = message_tts, tts_seed = tts_seed, is_local = FALSE, effect_types = sound_effects, traits = TTS_TRAIT_RATE_MEDIUM, channel_override = CHANNEL_TTS_ANNOUNCEMENT)
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(tts_cast), M, M, message_tts, tts_seed, TTS_LOCALYZE_ANNOUNCE, sound_effect, TTS_TRAIT_RATE_MEDIUM)
 	for(var/mob/M in garbled_receivers)
-		SStts220.get_tts(speaker = M, listener = M, message = garbled_message_tts, tts_seed = tts_seed, is_local = FALSE, effect_types = sound_effects, traits = TTS_TRAIT_RATE_MEDIUM, channel_override = CHANNEL_TTS_ANNOUNCEMENT)
+		INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(tts_cast), M, M, garbled_message_tts, tts_seed, TTS_LOCALYZE_ANNOUNCE, sound_effect, TTS_TRAIT_RATE_MEDIUM)
 
 
 // Announcers
 
 /datum/announcer/ares
 	tts_seed = TTS_SEED_ARES_ANNOUNCE
-	sound_effects = list(/datum/singleton/sound_effect/robot, /datum/singleton/sound_effect/radio)
+	sound_effect = SOUND_EFFECT_RADIO_ROBOT
 
 /datum/announcer/queen_mother
 	tts_seed = TTS_SEED_QUEEN_MOTHER_ANNOUNCE
 
 /datum/announcer/yautja
 	tts_seed = TTS_SEED_YAUTJA_ANNOUNCE
-	sound_effects = list(/datum/singleton/sound_effect/robot)
+	sound_effect = SOUND_EFFECT_ROBOT
 
 /datum/announcer/custom
-	sound_effects = list(/datum/singleton/sound_effect/radio)
+	sound_effect = SOUND_EFFECT_RADIO
 
 /// Беззвучный анонсер на случай, если не нужно проигрывать ттс
 /datum/announcer/silent

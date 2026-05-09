@@ -32,7 +32,6 @@ const KEY_CODE_TO_BYOND = {
   PAGEDOWN: 'Southeast',
   PAGEUP: 'Northeast',
   RIGHT: 'East',
-  TAB: 'Tab',
   ' ': 'Space',
   UP: 'North',
 };

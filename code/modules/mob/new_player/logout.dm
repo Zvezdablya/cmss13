@@ -3,10 +3,7 @@
 		GLOB.readied_players--
 	ready = FALSE
 
-	if(lobby_window)
-		lobby_window.unsubscribe()
-		lobby_window.close(FALSE)
-		lobby_window = null
+	QDEL_NULL(lobby_window)
 
 	var/client/exiting_client = GLOB.directory[persistent_ckey]
 	if(exiting_client)

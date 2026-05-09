@@ -5,6 +5,7 @@
 	ambience_exterior = AMBIENCE_ALMAYER
 	ceiling_muffle = FALSE
 
+
 //Drop Pods
 /area/shuttle/drop1
 	//soundscape_playlist = list('sound/soundscape/drum1.ogg')

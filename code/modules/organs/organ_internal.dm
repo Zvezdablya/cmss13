@@ -79,7 +79,7 @@
 		src.damage += amount
 
 	var/obj/limb/parent = owner.get_limb(parent_limb)
-	if(!silent && amount > 0)
+	if(!silent)
 		owner.custom_pain("Something inside your [parent.display_name] hurts a lot.", 1)
 	set_organ_status()
 

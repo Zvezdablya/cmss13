@@ -105,7 +105,7 @@
 	else if(!empty)
 		var/i = 0
 		while(i < num_of_magazines)
-			new magazine_type(src)
+			contents += new magazine_type(src)
 			i++
 	update_icon()
 

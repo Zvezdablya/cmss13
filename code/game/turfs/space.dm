@@ -1,3 +1,9 @@
+
+
+
+
+
+
 /turf/open/space
 	icon = 'icons/turf/floors/space.dmi'
 	name = "\proper space"
@@ -20,13 +26,8 @@
 
 /turf/open/space/Initialize(mapload, ...)
 	. = ..()
-	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
-
-	if(is_mainship_level(z))
-		if(SShijack.in_ftl)
-			SShijack.set_ftl_turf(src)
-		else if(SShijack.crashed)
-			SShijack.set_ftl_turf_open(src)
+	if(!istype(src, /turf/open/space/transit))
+		icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
 /turf/open/space/attack_hand(mob/user)
 	if ((user.is_mob_restrained() || !( user.pulling )))

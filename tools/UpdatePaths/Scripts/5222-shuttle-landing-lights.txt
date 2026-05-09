@@ -1,2 +1,0 @@
-/obj/structure/machinery/landinglight/ds1/@SUBTYPES : /obj/structure/machinery/landinglight/@SUBTYPES{@OLD}
-/obj/structure/machinery/landinglight/ds2/@SUBTYPES : /obj/structure/machinery/landinglight/@SUBTYPES{@OLD}

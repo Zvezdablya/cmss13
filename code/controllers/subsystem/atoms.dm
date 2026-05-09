@@ -68,7 +68,6 @@ SUBSYSTEM_DEF(atoms)
 		if(QDELETED(A))
 			continue
 		A.LateInitialize()
-		CHECK_TICK
 
 	#ifdef TESTING
 	testing("Late initialized [length(late_loaders)] atoms")
@@ -168,8 +167,6 @@ SUBSYSTEM_DEF(atoms)
 
 /datum/controller/subsystem/atoms/proc/lateinit_roundstart_atoms()
 	for(var/atom/A as anything in roundstart_loaders)
-		if(QDELETED(A))
-			continue
 		A.LateInitialize()
 	roundstart_loaders.Cut()
 

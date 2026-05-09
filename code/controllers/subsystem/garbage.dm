@@ -49,9 +49,7 @@ SUBSYSTEM_DEF(garbage)
 	//Queue
 	var/list/queues
 	#ifdef REFERENCE_TRACKING
-	#ifndef GC_FAILURE_HARD_LOOKUP // this list is redundant if we do hard lookups
 	var/list/reference_find_on_fail = list()
-	#endif
 	#ifdef REFERENCE_TRACKING_DEBUG
 	//Should we save found refs. Used for unit testing
 	var/should_save_refs = FALSE
@@ -157,9 +155,6 @@ SUBSYSTEM_DEF(garbage)
 
 	lastlevel = level
 
-// 1 from the hard reference in the queue, and 1 from `D` in the code below
-#define REFS_WE_EXPECT 2
-
 	//We do this rather then for(var/list/ref_info in queue) because that sort of for loop copies the whole list.
 	//Normally this isn't expensive, but the gc queue can grow to 40k items, and that gets costly/causes overrun.
 	for (var/i in 1 to length(queue))
@@ -177,12 +172,13 @@ SUBSYSTEM_DEF(garbage)
 
 		var/datum/D = L[GC_QUEUE_ITEM_REF]
 
+		// 1 from the hard reference in the queue, and 1 from the variable used before this
 		// If that's all we've got, send er off
-		if (refcount(D) == REFS_WE_EXPECT)
+		if (refcount(D) == 2)
 			++gcedlasttick
 			++totalgcs
 			pass_counts[level]++
-			#if defined(REFERENCE_TRACKING) && !defined(GC_FAILURE_HARD_LOOKUP)
+			#ifdef REFERENCE_TRACKING
 			reference_find_on_fail -= text_ref(D) //It's deleted we don't care anymore.
 			#endif
 			if (MC_TICK_CHECK)
@@ -199,19 +195,16 @@ SUBSYSTEM_DEF(garbage)
 		switch (level)
 			if (GC_QUEUE_CHECK)
 				#ifdef REFERENCE_TRACKING
-				// Decides how many refs to look for (potentially)
-				// Based off the remaining and the ones we can account for
-				var/remaining_refs = refcount(D) - REFS_WE_EXPECT
-				#ifdef GC_FAILURE_HARD_LOOKUP
-				INVOKE_ASYNC(D, TYPE_PROC_REF(/datum,find_references), remaining_refs)
-				ref_searching = TRUE
-				#else
 				if(reference_find_on_fail[text_ref(D)])
-					INVOKE_ASYNC(D, TYPE_PROC_REF(/datum,find_references), remaining_refs)
+					INVOKE_ASYNC(D, TYPE_PROC_REF(/datum,find_references))
 					ref_searching = TRUE
+				#ifdef GC_FAILURE_HARD_LOOKUP
+				else
+					INVOKE_ASYNC(D, TYPE_PROC_REF(/datum,find_references))
+					ref_searching = TRUE
+				#endif
 				reference_find_on_fail -= text_ref(D)
-				#endif // #ifdef GC_FAILURE_HARD_LOOKUP
-				#endif // #ifdef REFERENCE_TRACKING
+				#endif
 				var/type = D.type
 				var/datum/qdel_item/I = items[type]
 
@@ -223,14 +216,14 @@ SUBSYSTEM_DEF(garbage)
 					if(!check_rights_for(admin, R_ADMIN))
 						continue
 					to_chat(admin, "## TESTING: GC: -- [ADMIN_VV(D)] | [type] was unable to be GC'd --")
-				#endif // #ifdef TESTING
+				#endif
 				I.failures++
 
 				if (I.qdel_flags & QDEL_ITEM_SUSPENDED_FOR_LAG)
 					#ifdef REFERENCE_TRACKING
 					if(ref_searching)
 						return //ref searching intentionally cancels all further fires while running so things that hold references don't end up getting deleted, so we want to return here instead of continue
-					#endif // #ifdef REFERENCE_TRACKING
+					#endif
 					continue
 			if (GC_QUEUE_HARDDELETE)
 				HardDelete(D)
@@ -383,12 +376,10 @@ SUBSYSTEM_DEF(garbage)
 			#ifdef REFERENCE_TRACKING
 			if (QDEL_HINT_FINDREFERENCE) //qdel will, if REFERENCE_TRACKING is enabled, display all references to this object, then queue the object for deletion.
 				SSgarbage.Queue(D)
-				INVOKE_ASYNC(D, TYPE_PROC_REF(/datum,find_references))
+				D.find_references() //This breaks ci. Consider it insurance against somehow pring reftracking on accident
 			if (QDEL_HINT_IFFAIL_FINDREFERENCE) //qdel will, if REFERENCE_TRACKING is enabled and the object fails to collect, display all references to this object.
 				SSgarbage.Queue(D)
-				#ifndef GC_FAILURE_HARD_LOOKUP // if we have hard lookups this is basically on by default
 				SSgarbage.reference_find_on_fail[text_ref(D)] = TRUE
-				#endif
 			#endif
 			else
 				#ifdef TESTING
