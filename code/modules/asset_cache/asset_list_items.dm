@@ -148,7 +148,7 @@
 	name = "chat"
 
 /datum/asset/spritesheet/chat/register()
-	InsertAll("emoji", 'icons/emoji.dmi')
+	InsertAll("emoji", EMOJI_SET) // SS220 EDIT emojis
 	// pre-loading all lanugage icons also helps to avoid meta
 /* InsertAll("language", 'icons/misc/language.dmi')
 	// catch languages which are pulling icons from another file
@@ -328,6 +328,11 @@
 
 	var/list/icons_to_always_load = list(
 		/obj/item/storage/pill_bottle,
+		/obj/item/clothing/under/chainshirt/hunter/scalable,
+		/obj/item/clothing/suit/armor/yautja/hunter/scalable,
+		/obj/item/falcon_drone,
+		/obj/item/storage/belt/gun/quiver,
+		/obj/item/arrow,
 	)
 
 /datum/asset/spritesheet/vending_products/register()

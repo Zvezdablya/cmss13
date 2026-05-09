@@ -895,7 +895,7 @@
 	color = "#d3d3d3"
 	},
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -927,7 +927,7 @@
 /area/lv759/outdoors/colony_streets/east_central_street)
 "acz" = (
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -6902,7 +6902,7 @@
 /obj/item/clothing/accessory/patch/royal_marines,
 /obj/item/clothing/accessory/patch/forecon,
 /obj/item/clothing/accessory/patch/falcon,
-/obj/item/clothing/accessory/patch,
+/obj/item/clothing/accessory/patch/uscmpatch,
 /obj/item/storage/box/saltshaker,
 /obj/item/reagent_container/food/condiment/saltshaker,
 /obj/item/reagent_container/food/condiment/saltshaker{
@@ -9373,7 +9373,7 @@
 /turf/open/hybrisa/street/sidewalk/north,
 /area/lv759/outdoors/colony_streets/east_central_street)
 "aFo" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /turf/open/hybrisa/street/sidewalk/northwest,
@@ -10453,7 +10453,7 @@
 /turf/open/floor/plating,
 /area/lv759/indoors/pizzaria)
 "aNL" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 8
 	},
 /obj/effect/decal/medical_decals{
@@ -11207,7 +11207,7 @@
 	pixel_y = 32
 	},
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -11284,10 +11284,10 @@
 /turf/open/floor/almayer/plate,
 /area/lv759/indoors/weyyu_office/pressroom)
 "aTJ" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = 6
 	},
 /turf/open/hybrisa/street/sidewalk/north,
@@ -12886,12 +12886,6 @@
 	},
 /turf/open/floor/prison/whitegreenfull,
 /area/lv759/indoors/hospital/central_hallway)
-"bfZ" = (
-/turf/closed/shuttle{
-	dir = 1;
-	icon_state = "pwall"
-	},
-/area/space)
 "bga" = (
 /obj/effect/decal/hybrisa/dirt,
 /obj/item/hybrisa/misc/trash_bag_full_prop{
@@ -17106,10 +17100,10 @@
 /turf/open/hybrisa/street/cement3,
 /area/lv759/outdoors/colony_streets/east_central_street)
 "bNS" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = -12
 	},
 /turf/open/hybrisa/street/sidewalk/east,
@@ -22226,7 +22220,7 @@
 	pixel_y = 3
 	},
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -22481,7 +22475,7 @@
 /turf/open/hybrisa/street/cement1,
 /area/lv759/outdoors/colony_streets/central_streets)
 "cBc" = (
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = 12
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -22577,7 +22571,7 @@
 /area/lv759/outdoors/colony_streets/central_streets)
 "cBG" = (
 /turf/closed/wall/hybrisa/spaceport/unmeltable,
-/area/space)
+/area/sky/level4)
 "cBH" = (
 /obj/structure/machinery/light/small/blue{
 	dir = 4
@@ -23246,10 +23240,10 @@
 /turf/open/floor/almayer/test_floor5,
 /area/lv759/indoors/spaceport/horizon_runner)
 "cGH" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 8
 	},
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = 12
 	},
 /turf/open/hybrisa/street/sidewalk/west,
@@ -27477,7 +27471,7 @@
 /turf/open/floor/almayer/orange2/southwest,
 /area/lv759/indoors/landing_zone_2/kmcc_hub_cargo)
 "djS" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -30728,7 +30722,7 @@
 /turf/open/floor/plating/plating_catwalk/aicore,
 /area/lv759/indoors/hotel/hotel_hallway)
 "dKy" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 8
 	},
 /obj/structure/machinery/floodlight/landing,
@@ -35220,7 +35214,7 @@
 /turf/open/floor/hybrisa/tile/tilewhite,
 /area/lv759/indoors/wy_research_complex/xenoarcheology)
 "etH" = (
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = 12;
 	pixel_y = -6
 	},
@@ -35394,7 +35388,7 @@
 /area/lv759/indoors/meridian/meridian_office)
 "euJ" = (
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -35454,7 +35448,7 @@
 /turf/open/floor/almayer/plating/northeast,
 /area/lv759/indoors/power_plant/equipment_east)
 "evk" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 8
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -36339,7 +36333,7 @@
 /turf/open/floor/hybrisa/metal/grated/north,
 /area/lv759/outdoors/colony_streets/central_streets)
 "eCO" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
 /obj/structure/machinery/floodlight/landing,
@@ -36933,7 +36927,7 @@
 /turf/open/hybrisa/street/sidewalk/north,
 /area/lv759/outdoors/landing_zone_2)
 "eIt" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /obj/effect/decal/medical_decals{
@@ -39177,7 +39171,7 @@
 /turf/open/hybrisa/street/sidewalkfull,
 /area/lv759/outdoors/colony_streets/north_street)
 "eZB" = (
-/obj/structure/machinery/landinglight/ds1/delayone{
+/obj/structure/machinery/landinglight/delayone{
 	dir = 8
 	},
 /turf/open/hybrisa/street/sidewalk/west,
@@ -46967,7 +46961,7 @@
 /turf/open/floor/corsat/officetiles,
 /area/lv759/indoors/spaceport/starglider)
 "gid" = (
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = 12;
 	pixel_y = -6
 	},
@@ -49999,7 +49993,7 @@
 /turf/open/hybrisa/street/sidewalkfull,
 /area/lv759/outdoors/colony_streets/central_streets)
 "gHV" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /obj/effect/decal/medical_decals{
@@ -51684,7 +51678,7 @@
 /turf/open/floor/plating,
 /area/lv759/indoors/meridian/meridian_maintenance)
 "gUu" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -53173,7 +53167,6 @@
 "hhd" = (
 /obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch{
 	pixel_y = 28;
-	explo_proof = 1;
 	pixel_x = -4
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -58271,7 +58264,7 @@
 /area/lv759/outdoors/landing_zone_2)
 "hTY" = (
 /turf/closed/wall/hybrisa/rock,
-/area/space)
+/area/sky/level4)
 "hTZ" = (
 /obj/structure/barricade/handrail/hybrisa/handrail{
 	dir = 4
@@ -58668,7 +58661,7 @@
 /turf/open/floor/prison/darkbrown2/north,
 /area/lv759/indoors/power_plant/south_hallway)
 "hWZ" = (
-/obj/structure/machinery/landinglight/ds2/spoke,
+/obj/structure/machinery/landinglight/spoke,
 /turf/open/floor/strata/orange_edge/west,
 /area/lv759/indoors/wy_research_complex/hangarbay)
 "hXe" = (
@@ -60498,7 +60491,7 @@
 /turf/open/hybrisa/street/asphalt,
 /area/lv759/outdoors/colony_streets/east_central_street_left)
 "ilr" = (
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = -12;
 	pixel_y = -6
 	},
@@ -65606,9 +65599,7 @@
 /turf/open/floor/almayer/plate,
 /area/lv759/indoors/landing_zone_2/kmcc_hub_cargo)
 "iYC" = (
-/obj/structure/machinery/colony_floodlight_switch{
-	explo_proof = 1
-	},
+/obj/structure/machinery/colony_floodlight_switch,
 /turf/closed/wall/hybrisa/colony/engineering/ribbed,
 /area/lv759/indoors/power_plant/geothermal_generators)
 "iYE" = (
@@ -65804,7 +65795,7 @@
 /area/lv759/indoors/apartment/eastrestroomsshower)
 "jae" = (
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -66887,7 +66878,7 @@
 /turf/open/hybrisa/street/asphalt,
 /area/lv759/outdoors/colony_streets/north_east_street_LZ)
 "jiL" = (
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_y = -6
 	},
 /turf/open/floor/prison/darkredfull2,
@@ -77314,7 +77305,7 @@
 /area/lv759/indoors/wy_research_complex/weaponresearchlab)
 "kLw" = (
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -79164,7 +79155,7 @@
 /turf/open/floor/hybrisa/carpet/carpetblack,
 /area/lv759/indoors/wy_research_complex/dormsbedroom)
 "kZZ" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 4
 	},
 /obj/effect/decal/medical_decals{
@@ -80577,7 +80568,7 @@
 	pixel_y = 32
 	},
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -82224,7 +82215,7 @@
 /turf/closed/wall/hybrisa/colony,
 /area/lv759/outdoors/colony_streets/north_east_street)
 "lxp" = (
-/obj/structure/machinery/landinglight/ds2/spoke,
+/obj/structure/machinery/landinglight/spoke,
 /turf/open/floor/strata/orange_edge/east,
 /area/lv759/indoors/wy_research_complex/hangarbay)
 "lxr" = (
@@ -83391,7 +83382,7 @@
 /area/lv759/indoors/apartment/eastbedroomsstorage)
 "lFX" = (
 /turf/closed/wall/hybrisa/colony/reinforced/hull,
-/area/space)
+/area/sky/level4)
 "lFZ" = (
 /obj/effect/decal/hybrisa/dirt_2,
 /turf/open/hybrisa/street/sidewalk/south,
@@ -83647,10 +83638,10 @@
 /turf/open/auto_turf/hybrisa_auto_turf/layer0,
 /area/lv759/outdoors/landing_zone_2/kmcc_hub_cargo_entrance_south)
 "lHm" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = -6
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -92815,7 +92806,7 @@
 /turf/open/floor/almayer/plate,
 /area/lv759/indoors/weyyu_office)
 "nck" = (
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = -12;
 	pixel_y = -6
 	},
@@ -92823,7 +92814,7 @@
 /area/lv759/outdoors/landing_zone_1)
 "ncm" = (
 /obj/effect/decal/hybrisa/dirt,
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /turf/open/floor/prison/ramptop,
@@ -92918,7 +92909,7 @@
 /turf/open/hybrisa/street/asphalt,
 /area/lv759/outdoors/colony_streets/south_east_street)
 "ndc" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /turf/open/hybrisa/street/sidewalk/northeast,
@@ -93589,7 +93580,7 @@
 /turf/open/hybrisa/street/sidewalk/north,
 /area/lv759/outdoors/colony_streets/south_east_street)
 "niS" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /obj/effect/decal/medical_decals{
@@ -94940,8 +94931,8 @@
 /turf/open/auto_turf/hybrisa_auto_turf/layer2,
 /area/lv759/outdoors/caves/north_west_caves_outdoors)
 "ntK" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/delaytwo,
+/obj/structure/machinery/landinglight/spoke{
 	pixel_y = 12;
 	pixel_x = -6
 	},
@@ -95438,7 +95429,7 @@
 	},
 /area/lv759/indoors/weymart)
 "nyq" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /obj/effect/decal/medical_decals{
@@ -98351,7 +98342,7 @@
 /turf/open/auto_turf/hybrisa_auto_turf/layer2,
 /area/lv759/indoors/caves/west_caves)
 "nTR" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /obj/effect/decal/medical_decals{
@@ -99166,7 +99157,7 @@
 /turf/open/hybrisa/street/asphalt,
 /area/lv759/outdoors/colony_streets/north_street)
 "nYW" = (
-/obj/structure/machinery/landinglight/ds2/spoke,
+/obj/structure/machinery/landinglight/spoke,
 /turf/open/floor/strata/orange_edge/southeast,
 /area/lv759/indoors/wy_research_complex/hangarbay)
 "nZa" = (
@@ -99577,7 +99568,7 @@
 /turf/open/floor/hybrisa/metal/grated/north,
 /area/lv759/indoors/garage_workshop)
 "oca" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/machinery/landinglight/delaytwo,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/floor/prison/ramptop,
 /area/lv759/outdoors/landing_zone_2)
@@ -99643,7 +99634,7 @@
 /area/lv759/indoors/hospital/maintenance_south)
 "ocE" = (
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -111223,7 +111214,7 @@
 /turf/open/hybrisa/street/asphalt,
 /area/lv759/outdoors/colony_streets/east_central_street)
 "pQa" = (
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = -12
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
@@ -115923,7 +115914,7 @@
 /turf/closed/wall/hybrisa/colony/hospital/ribbed,
 /area/lv759/bunker/checkpoint)
 "qCa" = (
-/obj/structure/machinery/landinglight/ds2/spoke,
+/obj/structure/machinery/landinglight/spoke,
 /turf/open/floor/strata/orange_edge/southwest,
 /area/lv759/indoors/wy_research_complex/hangarbay)
 "qCb" = (
@@ -116677,7 +116668,7 @@
 /turf/open/floor/hybrisa/tile/tilebeige,
 /area/lv759/indoors/jacks_surplus)
 "qIK" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 4
 	},
 /obj/effect/decal/medical_decals{
@@ -116929,7 +116920,7 @@
 /turf/open/floor/strata/orange_edge/east,
 /area/lv759/indoors/weymart)
 "qKl" = (
-/obj/structure/machinery/landinglight/ds2/spoke,
+/obj/structure/machinery/landinglight/spoke,
 /turf/open/floor/strata/orange_edge/northeast,
 /area/lv759/indoors/wy_research_complex/hangarbay)
 "qKr" = (
@@ -119068,7 +119059,7 @@
 /turf/open/floor/almayer/black/northeast,
 /area/lv759/indoors/wy_research_complex/head_research_office)
 "raT" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/machinery/landinglight/delaytwo,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/sidewalk/southeast,
 /area/lv759/outdoors/landing_zone_2)
@@ -122192,8 +122183,7 @@
 /area/lv759/outdoors/colony_streets/south_east_street)
 "rzF" = (
 /obj/structure/machinery/colony_floodlight_switch/electrified_fence_switch{
-	pixel_y = 28;
-	explo_proof = 1
+	pixel_y = 28
 	},
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv759/indoors/electical_systems/substation1)
@@ -123484,7 +123474,7 @@
 /turf/open/hybrisa/street/underground_unweedable,
 /area/lv759/indoors/wy_research_complex/hallwaysouthwest)
 "rIB" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
 /turf/open/hybrisa/street/sidewalk/east,
@@ -124447,10 +124437,7 @@
 /turf/open/hybrisa/street/cement3,
 /area/lv759/outdoors/colony_streets/south_east_street)
 "rPf" = (
-/turf/closed/shuttle{
-	dir = 1;
-	icon_state = "pwall"
-	},
+/turf/closed/cordon,
 /area/lv759/oob)
 "rPi" = (
 /obj/structure/prop/hybrisa/misc/buildinggreebliessmall{
@@ -126897,7 +126884,7 @@
 /turf/open/floor/prison/red/east,
 /area/lv759/indoors/wy_research_complex/reception)
 "shi" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -127433,11 +127420,8 @@
 /turf/open/hybrisa/street/roadlines4,
 /area/lv759/outdoors/colony_streets/south_west_street)
 "sly" = (
-/turf/closed/shuttle{
-	dir = 1;
-	icon_state = "pwall"
-	},
-/area/sky)
+/turf/closed/cordon,
+/area/space)
 "slz" = (
 /obj/structure/prop/hybrisa/misc/fake/lattice/full,
 /obj/effect/hybrisa/misc/fake/pipes/pipe1,
@@ -131757,7 +131741,7 @@
 /turf/open/floor/plating,
 /area/lv759/indoors/hospital/emergency_room)
 "sTw" = (
-/obj/structure/machinery/landinglight/ds2/delaythree,
+/obj/structure/machinery/landinglight/delaythree,
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaldir";
 	color = "#d3d3d3"
@@ -132064,7 +132048,7 @@
 /turf/open/floor/hybrisa/tile/beige_bigtile,
 /area/lv759/indoors/power_plant/workers_canteen)
 "sVO" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 1
 	},
 /obj/effect/decal/medical_decals{
@@ -134424,7 +134408,7 @@
 /area/lv759/outdoors/colony_streets/east_central_street)
 "tmf" = (
 /turf/open_space,
-/area/space)
+/area/sky/level4)
 "tmq" = (
 /obj/structure/machinery/vending/dinnerware{
 	pixel_x = 5
@@ -135071,7 +135055,7 @@
 /turf/open/floor/hybrisa/tile/tilewhitecheckered,
 /area/lv759/indoors/apartment/westentertainment)
 "tqN" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/machinery/landinglight/delaytwo,
 /turf/open/hybrisa/street/sidewalk/southwest,
 /area/lv759/outdoors/landing_zone_2)
 "tqO" = (
@@ -135756,7 +135740,7 @@
 /turf/open/floor/hybrisa/misc/spaceport1,
 /area/lv759/indoors/spaceport/docking_bay_1)
 "tvS" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 1
 	},
 /turf/open/floor/prison/ramptop,
@@ -138289,7 +138273,7 @@
 /turf/open/floor/prison/red/east,
 /area/lv759/indoors/colonial_marshals/reception)
 "tRr" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/machinery/landinglight/delaytwo,
 /obj/effect/decal/hybrisa/dirt,
 /turf/open/hybrisa/street/sidewalk/south,
 /area/lv759/outdoors/landing_zone_2)
@@ -139203,7 +139187,7 @@
 /turf/open/floor/corsat/officetiles,
 /area/lv759/indoors/mining_outpost/east_deploymentbay)
 "tYi" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -139463,7 +139447,7 @@
 /turf/closed/wall/hybrisa/colony/engineering,
 /area/lv759/indoors/power_plant/workers_canteen_kitchen)
 "uaC" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 4
 	},
 /obj/effect/decal/medical_decals{
@@ -139972,7 +139956,7 @@
 /turf/open/floor/corsat,
 /area/lv759/indoors/meridian/meridian_factory)
 "ufs" = (
-/obj/structure/machinery/landinglight/ds2/delaythree,
+/obj/structure/machinery/landinglight/delaythree,
 /obj/effect/decal/medical_decals{
 	icon_state = "triagedecaldir";
 	color = "#d3d3d3"
@@ -142993,7 +142977,7 @@
 /turf/open/floor/prison/bright_clean/southwest,
 /area/lv759/indoors/power_plant)
 "uCq" = (
-/obj/structure/machinery/landinglight/ds2/spoke,
+/obj/structure/machinery/landinglight/spoke,
 /turf/open/floor/strata/orange_edge/northwest,
 /area/lv759/indoors/wy_research_complex/hangarbay)
 "uCr" = (
@@ -145512,7 +145496,7 @@
 /turf/open/floor/plating/plating_catwalk/prison,
 /area/lv759/outdoors/landing_zone_1)
 "uSL" = (
-/obj/structure/machinery/landinglight/ds2/delaythree{
+/obj/structure/machinery/landinglight/delaythree{
 	dir = 8
 	},
 /obj/effect/decal/medical_decals{
@@ -151747,7 +151731,7 @@
 	pixel_y = -1
 	},
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -154803,7 +154787,7 @@
 	},
 /obj/structure/blocker/forcefield/vehicles,
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -155043,10 +155027,10 @@
 /turf/open/floor/prison/darkredfull2,
 /area/lv759/outdoors/landing_zone_1)
 "wpz" = (
-/obj/structure/machinery/landinglight/ds1{
+/obj/structure/machinery/landinglight{
 	dir = 4
 	},
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/spoke{
 	pixel_x = -12
 	},
 /obj/effect/decal/hybrisa/dirt,
@@ -155760,8 +155744,8 @@
 /turf/open/hybrisa/street/sidewalk/northwest,
 /area/lv759/outdoors/colony_streets/south_east_street)
 "wvJ" = (
-/obj/structure/machinery/landinglight/ds1/delaytwo,
-/obj/structure/machinery/landinglight/ds2/spoke{
+/obj/structure/machinery/landinglight/delaytwo,
+/obj/structure/machinery/landinglight/spoke{
 	pixel_y = 12;
 	pixel_x = 6
 	},
@@ -159462,7 +159446,7 @@
 	icon_state = "NW-out"
 	},
 /obj/structure/sign/safety/manualopenclose{
-	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the the card reader being scraped up. Poor bastards.";
+	desc = "The now broken door access console for these podlocks. Seems like some poor bastard was frantically trying to slide their card due to the card reader being scraped up. Poor bastards.";
 	icon = 'icons/obj/structures/machinery/monitors.dmi';
 	icon_state = "auth_off";
 	name = "Access console";
@@ -162991,7 +162975,7 @@
 /area/lv759/indoors/caves/south_caves)
 "xzD" = (
 /obj/effect/decal/cleanable/liquid_fuel,
-/obj/structure/machinery/landinglight/ds1/delaytwo,
+/obj/structure/machinery/landinglight/delaytwo,
 /turf/open/hybrisa/street/sidewalk/south,
 /area/lv759/outdoors/landing_zone_2)
 "xzL" = (
@@ -281424,259 +281408,259 @@ sly
 "}
 
 (1,1,3) = {"
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
 "}
 (2,1,3) = {"
-bfZ
+sly
 cBG
 cBG
 cBG
@@ -281925,10 +281909,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (3,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -282177,10 +282161,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (4,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -282429,10 +282413,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (5,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -282681,10 +282665,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (6,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -282933,10 +282917,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (7,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -283185,10 +283169,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (8,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -283437,10 +283421,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (9,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -283689,10 +283673,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (10,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -283941,10 +283925,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (11,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -284193,10 +284177,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (12,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -284445,10 +284429,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (13,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -284697,10 +284681,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (14,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -284949,10 +284933,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (15,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -285201,10 +285185,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (16,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -285453,10 +285437,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (17,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -285705,10 +285689,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (18,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -285957,10 +285941,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (19,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -286209,10 +286193,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (20,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -286461,10 +286445,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (21,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -286713,10 +286697,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (22,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -286965,10 +286949,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (23,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -287217,10 +287201,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (24,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -287469,10 +287453,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (25,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -287721,10 +287705,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (26,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -287973,10 +287957,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (27,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -288225,10 +288209,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (28,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -288477,10 +288461,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (29,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -288729,10 +288713,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (30,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -288981,10 +288965,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (31,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -289233,10 +289217,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (32,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -289485,10 +289469,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (33,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -289737,10 +289721,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (34,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -289989,10 +289973,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (35,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -290241,10 +290225,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (36,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -290493,10 +290477,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (37,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -290745,10 +290729,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (38,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -290997,10 +290981,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (39,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -291249,10 +291233,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (40,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -291501,10 +291485,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (41,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -291753,10 +291737,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (42,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -292005,10 +291989,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (43,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -292257,10 +292241,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (44,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -292509,10 +292493,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (45,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -292761,10 +292745,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (46,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -293013,10 +292997,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (47,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -293265,10 +293249,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (48,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -293517,10 +293501,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (49,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -293769,10 +293753,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (50,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -294021,10 +294005,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (51,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -294273,10 +294257,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (52,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -294525,10 +294509,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (53,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -294777,10 +294761,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (54,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -295029,10 +295013,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (55,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -295281,10 +295265,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (56,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -295533,10 +295517,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (57,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -295785,10 +295769,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (58,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -296037,10 +296021,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (59,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -296289,10 +296273,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (60,1,3) = {"
-bfZ
+sly
 cBG
 tmf
 tmf
@@ -296541,10 +296525,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (61,1,3) = {"
-bfZ
+sly
 cBG
 cBG
 cBG
@@ -296793,10 +296777,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (62,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -297045,10 +297029,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (63,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -297297,10 +297281,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (64,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -297549,10 +297533,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (65,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -297801,10 +297785,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (66,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -298053,10 +298037,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (67,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -298305,10 +298289,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (68,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -298557,10 +298541,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (69,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -298809,10 +298793,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (70,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -299061,10 +299045,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (71,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -299313,10 +299297,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (72,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -299565,10 +299549,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (73,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -299817,10 +299801,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (74,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -300069,10 +300053,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (75,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -300321,10 +300305,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (76,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -300573,10 +300557,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (77,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -300825,10 +300809,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (78,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -301077,10 +301061,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (79,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -301329,10 +301313,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (80,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -301581,10 +301565,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (81,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -301833,10 +301817,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (82,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -302085,10 +302069,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (83,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -302337,10 +302321,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (84,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -302589,10 +302573,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (85,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -302841,10 +302825,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (86,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -303093,10 +303077,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (87,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -303345,10 +303329,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (88,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -303597,10 +303581,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (89,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -303849,10 +303833,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (90,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -304101,10 +304085,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (91,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -304353,10 +304337,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (92,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -304605,10 +304589,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (93,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -304857,10 +304841,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (94,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -305109,10 +305093,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (95,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -305361,10 +305345,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (96,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -305613,10 +305597,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (97,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -305865,10 +305849,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (98,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -306117,10 +306101,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (99,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -306369,10 +306353,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (100,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -306621,10 +306605,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (101,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -306873,10 +306857,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (102,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -307125,10 +307109,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (103,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -307377,10 +307361,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (104,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -307629,10 +307613,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (105,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -307881,10 +307865,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (106,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -308133,10 +308117,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (107,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -308385,10 +308369,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (108,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -308637,10 +308621,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (109,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -308889,10 +308873,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (110,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -309141,10 +309125,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (111,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -309393,10 +309377,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (112,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -309645,10 +309629,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (113,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -309897,10 +309881,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (114,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -310149,10 +310133,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (115,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -310401,10 +310385,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (116,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -310653,10 +310637,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (117,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -310905,10 +310889,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (118,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -311157,10 +311141,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (119,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -311409,10 +311393,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (120,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -311661,10 +311645,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (121,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -311913,10 +311897,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (122,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -312165,10 +312149,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (123,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -312417,10 +312401,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (124,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -312669,10 +312653,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (125,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -312921,10 +312905,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (126,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -313173,10 +313157,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (127,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -313425,10 +313409,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (128,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -313677,10 +313661,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (129,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -313929,10 +313913,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (130,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -314181,10 +314165,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (131,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -314433,10 +314417,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (132,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -314685,10 +314669,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (133,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -314937,10 +314921,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (134,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -315189,10 +315173,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (135,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -315441,10 +315425,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (136,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -315693,10 +315677,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (137,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -315945,10 +315929,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (138,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -316197,10 +316181,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (139,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -316449,10 +316433,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (140,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -316701,10 +316685,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (141,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -316953,10 +316937,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (142,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -317205,10 +317189,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (143,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -317457,10 +317441,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (144,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -317709,10 +317693,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (145,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -317961,10 +317945,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (146,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -318213,10 +318197,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (147,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -318465,10 +318449,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (148,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -318717,10 +318701,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (149,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -318969,10 +318953,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (150,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -319221,10 +319205,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (151,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -319473,10 +319457,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (152,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -319725,10 +319709,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (153,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -319977,10 +319961,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (154,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -320229,10 +320213,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (155,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -320481,10 +320465,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (156,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -320733,10 +320717,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (157,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -320985,10 +320969,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (158,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -321237,10 +321221,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (159,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -321489,10 +321473,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (160,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -321741,10 +321725,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (161,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -321993,10 +321977,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (162,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -322245,10 +322229,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (163,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -322497,10 +322481,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (164,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -322749,10 +322733,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (165,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -323001,10 +322985,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (166,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -323253,10 +323237,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (167,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -323505,10 +323489,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (168,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -323757,10 +323741,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (169,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -324009,10 +323993,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (170,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -324261,10 +324245,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (171,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -324513,10 +324497,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (172,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -324765,10 +324749,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (173,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -325017,10 +325001,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (174,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -325269,10 +325253,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (175,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -325521,10 +325505,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (176,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -325773,10 +325757,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (177,1,3) = {"
-bfZ
+sly
 hTY
 hTY
 hTY
@@ -326025,10 +326009,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (178,1,3) = {"
-bfZ
+sly
 lFX
 lFX
 lFX
@@ -326277,10 +326261,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (179,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -326529,10 +326513,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (180,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -326781,10 +326765,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (181,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -327033,10 +327017,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (182,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -327285,10 +327269,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (183,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -327537,10 +327521,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (184,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -327789,10 +327773,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (185,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -328041,10 +328025,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (186,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -328293,10 +328277,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (187,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -328545,10 +328529,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (188,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -328797,10 +328781,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (189,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -329049,10 +329033,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (190,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -329301,10 +329285,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (191,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -329553,10 +329537,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (192,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -329805,10 +329789,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (193,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -330057,10 +330041,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (194,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -330309,10 +330293,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (195,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -330561,10 +330545,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (196,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -330813,10 +330797,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (197,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -331065,10 +331049,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (198,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -331317,10 +331301,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (199,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -331569,10 +331553,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (200,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -331821,10 +331805,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (201,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -332073,10 +332057,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (202,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -332325,10 +332309,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (203,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -332577,10 +332561,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (204,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -332829,10 +332813,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (205,1,3) = {"
-bfZ
+sly
 lFX
 lFX
 tmf
@@ -333081,10 +333065,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (206,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -333333,10 +333317,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (207,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -333585,10 +333569,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (208,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -333837,10 +333821,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (209,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -334089,10 +334073,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (210,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -334341,10 +334325,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (211,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -334593,10 +334577,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (212,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -334845,10 +334829,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (213,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -335097,10 +335081,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (214,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -335349,10 +335333,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (215,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -335601,10 +335585,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (216,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -335853,10 +335837,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (217,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -336105,10 +336089,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (218,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -336357,10 +336341,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (219,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -336609,10 +336593,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (220,1,3) = {"
-bfZ
+sly
 lFX
 lFX
 tmf
@@ -336861,10 +336845,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (221,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -337113,10 +337097,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (222,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -337365,10 +337349,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (223,1,3) = {"
-bfZ
+sly
 lFX
 tmf
 tmf
@@ -337617,10 +337601,10 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (224,1,3) = {"
-bfZ
+sly
 lFX
 lFX
 lFX
@@ -337869,257 +337853,257 @@ hTY
 hTY
 hTY
 hTY
-bfZ
+sly
 "}
 (225,1,3) = {"
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
-bfZ
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
+sly
 "}

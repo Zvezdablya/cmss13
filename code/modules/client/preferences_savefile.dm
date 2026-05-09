@@ -1,5 +1,5 @@
 #define SAVEFILE_VERSION_MIN 8
-#define SAVEFILE_VERSION_MAX 34
+#define SAVEFILE_VERSION_MAX 35
 
 //handles converting savefiles to new formats
 //MAKE SURE YOU KEEP THIS UP TO DATE!
@@ -229,7 +229,13 @@
 		pref_toggles |= TOGGLE_COCKING_TO_HAND // enabled by default for new saves
 		S["toggle_prefs"] << pref_toggles
 
-	if(savefile_version < 34) // we have removed Tab from the default binds, allow users to bind it back if they want. needs to be async after logging in
+	if(savefile_version < 34)
+		var/pref_toggles
+		S["toggle_prefs"] >> pref_toggles
+		pref_toggles |= TOGGLE_WIELD_ASSIST // enabled by default for new saves
+		S["toggle_prefs"] << pref_toggles
+
+	if(savefile_version < 35) // we have removed Tab from the default binds, allow users to bind it back if they want. needs to be async after logging in
 		updated_from = savefile_version
 
 	if(updated_from)
@@ -360,6 +366,7 @@
 	S["pred_gender"] >> predator_gender
 	S["pred_age"] >> predator_age
 	S["pred_use_legacy"] >> predator_use_legacy
+	S["pred_use_unique"] >> predator_use_unique
 	S["pred_trans_type"] >> predator_translator_type
 	S["pred_invis_sound"] >> predator_invisibility_sound
 	S["pred_mask_type"] >> predator_mask_type
@@ -434,6 +441,7 @@
 	S["xeno_customizations"] >> xeno_customizations_string
 	S["quick_cast"] >> quick_cast
 	S["screentips"] >> screentips
+	S["xeno_show_hotkeys"] >> xeno_show_hotkeys
 	// BANDAMARINES EDIT END
 
 	//Sanitize
@@ -519,6 +527,7 @@
 	predator_gender = sanitize_text(predator_gender, initial(predator_gender))
 	predator_age = sanitize_integer(predator_age, 100, 10000, initial(predator_age))
 	predator_use_legacy = sanitize_inlist(predator_use_legacy, PRED_LEGACIES, initial(predator_use_legacy))
+	predator_use_unique = sanitize_inlist(predator_use_unique, PRED_UNIQUES, initial(predator_use_unique))
 	predator_translator_type = sanitize_inlist(predator_translator_type, PRED_TRANSLATORS, initial(predator_translator_type))
 	predator_invisibility_sound = sanitize_inlist(predator_invisibility_sound, PRED_INVIS_SOUNDS, initial(predator_invisibility_sound))
 	predator_mask_type = sanitize_integer(predator_mask_type,1,1000000,initial(predator_mask_type))
@@ -571,13 +580,14 @@
 		observer_huds = list("Medical HUD" = FALSE, "Security HUD" = FALSE, "Squad HUD" = FALSE, "Xeno Status HUD" = FALSE, "Hunter HUD"= FALSE, HUD_MENTOR_SIGHT = FALSE)
 
 	volume_preferences = sanitize_volume_preferences(volume_preferences, list(1, 0.5, 1, 0.6, // Game, music, admin midis, lobby music
-		1, 0.5, 0.5)) // Local, Radio,  Announces - SS220 TTS EDIT from "modular/text_to_speech/code/sound.dm"
+		1, 0.5, 0.5, 0.5)) // Local, Radio, Announces, Hivemind - SS220 TTS EDIT from "modular/text_to_speech/code/sound.dm"
 
 	// BANDAMARINES EDIT START
 	xeno_customization_visibility = sanitize_inlist(xeno_customization_visibility, GLOB.xeno_customization_visibility_options, XENO_CUSTOMIZATION_SHOW_LORE_FRIENDLY)
 	// Xeno Customizations are sanitized in /datum/xeno_customization_picker/setup(), we need DB and player entity ready for this
 	quick_cast = sanitize_integer(quick_cast, FALSE, TRUE, FALSE)
 	screentips = sanitize_integer(screentips, FALSE, TRUE, TRUE)
+	xeno_show_hotkeys = sanitize_integer(xeno_show_hotkeys, FALSE, TRUE, TRUE)
 	// BANDAMARINES EDIT END
 
 	if(!islist(custom_keybinds))
@@ -655,6 +665,7 @@
 	S["pred_gender"] << predator_gender
 	S["pred_age"] << predator_age
 	S["pred_use_legacy"] << predator_use_legacy
+	S["pred_use_unique"] << predator_use_unique
 	S["pred_trans_type"] << predator_translator_type
 	S["pred_invis_sound"] << predator_invisibility_sound
 	S["pred_mask_type"] << predator_mask_type
@@ -724,6 +735,7 @@
 	S["quick_cast"] << quick_cast
 	S["screentips"] << screentips
 	S["xeno_customizations"] << xeno_customizations_string
+	S["xeno_show_hotkeys"] << xeno_show_hotkeys
 	// BANDAMARINES EDIT END
 
 	return TRUE
