@@ -6,9 +6,9 @@
 	name = "alien mask"
 	desc = "A beautifully designed metallic face mask, both ornate and functional."
 
-	icon = 'icons/obj/items/hunter/pred_mask.dmi'
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/hunter/pred_mask.dmi'
+		WEAR_FACE = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
 	)
 	icon_state = "pred_mask1_ebony"
 	item_state = "helmet"
@@ -47,12 +47,31 @@
 	///A list of all intrinsic mask actions
 	var/list/mask_actions = list(/datum/action/predator_action/mask/zoom, /datum/action/predator_action/mask/visor)
 
-/obj/item/clothing/mask/gas/yautja/New(location, mask_number = rand(1,17), armor_material = "ebony")
+/obj/item/clothing/mask/gas/yautja/New(location, mask_number = rand(1,17), armor_material = "ebony", legacy = "None")
 	..()
 	forceMove(location)
 	if(!random_icon)
 		LAZYSET(item_state_slots, WEAR_FACE, icon_state)
 		return
+
+	if(legacy != "None")
+		switch(legacy)
+			if("Dragon")
+				icon_state = "pred_mask_elder_tr"
+				LAZYSET(item_state_slots, WEAR_FACE, "pred_mask_elder_tr")
+				return
+			if("Swamp")
+				icon_state = "pred_mask_elder_joshuu"
+				LAZYSET(item_state_slots, WEAR_FACE, "pred_mask_elder_joshuu")
+				return
+			if("Enforcer")
+				icon_state = "pred_mask_elder_feweh"
+				LAZYSET(item_state_slots, WEAR_FACE, "pred_mask_elder_feweh")
+				return
+			if("Collector")
+				icon_state = "pred_mask_elder_n"
+				LAZYSET(item_state_slots, WEAR_FACE, "pred_mask_elder_n")
+				return
 
 	if(mask_number > 17)
 		mask_number = 1
@@ -319,9 +338,9 @@
 	name = "alien stone mask"
 	desc = "A beautifully designed face mask, ornate but non-functional and made entirely of stone."
 
-	icon = 'icons/obj/items/hunter/pred_mask.dmi'
+	icon = 'icons/obj/items/hunter/pred_gear.dmi'
 	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/hunter/pred_mask.dmi'
+		WEAR_FACE = 'icons/mob/humans/onmob/hunter/pred_gear.dmi'
 	)
 	icon_state = "pred_mask1_ebony"
 
@@ -365,9 +384,9 @@
 /obj/item/clothing/mask/gas/yautja/hunter/ancient
 	name = "ornate ancient alien mask"
 	desc = "An ornate ancient faceplate of an aged alloy, once worn by a revered hunter. Though tarnished by time, its craftsmanship remains exquisite - a fusion of artistry and deadly function."
-	icon = 'icons/obj/items/hunter/pred_mask.dmi'
+	icon = 'icons/obj/items/hunter/ancient_mask.dmi'
 	item_icons = list(
-		WEAR_FACE = 'icons/mob/humans/onmob/hunter/pred_mask.dmi'
+		WEAR_FACE = 'icons/mob/humans/onmob/hunter/ancient_mask.dmi'
 	)
 	icon_state = "pred_mask_ancient_redglow"
 	item_state = "helmet"

@@ -34,7 +34,6 @@ type TTSData = {
   phrases: string[];
   providers: Provider[];
   seeds: Seed[];
-  theme: string;
 };
 
 const gendersIcons = {
@@ -82,10 +81,8 @@ const getCheckboxGroup = (
 };
 
 export const TTSSeedsExplorer = () => {
-  const { data } = useBackend<TTSData>();
-  const { theme } = data;
   return (
-    <Window width={1000} height={685} theme={theme}>
+    <Window width={1000} height={685}>
       <Window.Content>
         <TTSExplorerContent />
       </Window.Content>
