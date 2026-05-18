@@ -215,21 +215,32 @@
 	name = "9X-F flechette dart"
 	icon_state = "sharp_flechette_dart"
 	handful_state = "sharp_flechette"
-	embed_object = /obj/item/sharp/flechette
 	shrapnel_type = /datum/ammo/bullet/shotgun/flechette_spread
 
 /datum/ammo/rifle/sharp/flechette/on_hit_mob(mob/living/target, obj/projectile/shot_dart)
 	if(!target || target == shot_dart.firer)
 		return
+
 	var/mob/shooter = shot_dart.firer
 	shake_camera(target, 2, 1)
-	if(shooter && ismob(shooter))
-		if(!target.get_target_lock(shooter.faction_group))
-			create_flechette(target.loc, shot_dart)
+
+	if(!ismob(shooter))
+		return
+
+	if(target.get_target_lock(shooter.faction_group))
+		return
+
+	var/turf/T = get_turf(target)
+	if(!T)
+		return
+
+	create_flechette(T, shot_dart, shooter)
 
 /datum/ammo/rifle/sharp/flechette/on_pointblank(mob/living/target, obj/projectile/shot_dart)
 	if(!target) return
 	shot_dart.dir = get_dir(shot_dart.firer, target)
+	target.visible_message(SPAN_WARNING("PB DEBUG target: [target]"))
+	target.visible_message(SPAN_WARNING("PB DEBUG shot_dart: [shot_dart]"))
 
 /datum/ammo/rifle/sharp/flechette/on_hit_obj(obj/O, obj/projectile/P)
 	create_flechette(O.loc, P)
@@ -240,11 +251,27 @@
 /datum/ammo/rifle/sharp/flechette/do_at_max_range(obj/projectile/P)
 	create_flechette(P.loc, P)
 
-/datum/ammo/rifle/sharp/flechette/proc/create_flechette(loc, obj/projectile/shot_dart)
+/datum/ammo/rifle/sharp/flechette/proc/create_flechette(turf/T, obj/projectile/shot_dart, mob/shooter)
+	if(!T)
+		return
 	var/shrapnel_count = 8
 	var/dispersion_angle = 20
-	create_shrapnel(loc, shrapnel_count, shot_dart.dir, dispersion_angle, shrapnel_type, shot_dart.weapon_cause_data, FALSE, 1)
-	apply_explosion_overlay(loc)
+	if(shot_dart?.dir)
+		dir = shot_dart.dir
+	var/turf/clean_epicenter = T
+	addtimer(CALLBACK(GLOBAL_PROC, /proc/create_shrapnel,
+		clean_epicenter,
+		shrapnel_count,
+		dir,
+		dispersion_angle,
+		shrapnel_type,
+		null,
+		FALSE,
+		0.15
+	), 0)
+
+	apply_explosion_overlay(T)
+	T.visible_message(SPAN_WARNING("FORCED SHRAPNEL CONE DIR: [dir]"))
 
 /datum/ammo/rifle/sharp/flechette/proc/apply_explosion_overlay(turf/loc)
 	var/obj/effect/overlay/sharp_overlay = new /obj/effect/overlay(loc)
