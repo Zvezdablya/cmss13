@@ -1,38 +1,67 @@
 /obj/item/toy/plush/moth
 	name = "moth plushie"
-	desc = "A plushie depicting an adorable mothperson. It's a huggable bug!"
+	desc = "Плюшевая игрушка, изображающая очаровательного человека-мотылька. Милый пушистый жучок, которого так и хочется обнять!"
 	icon = 'modular/moff/icon/plushes.dmi'
 	icon_state = "moffplush"
-	var/suicide_count = 0
+	var/moff_sound_list = list('modular/moff/sound/moth_moth_chitter.ogg', 'modular/moff/sound/moth_moth_death.ogg', 'modular/moff/sound/moth_moth_flutter.ogg', 'modular/moff/sound/moth_moth_laugh1.ogg', 'modular/moff/sound/moth_scream_moth.ogg')
+	var/moff_kill_list = list('sound/scp/firstpersonsnap.ogg', 'sound/scp/firstpersonsnap2.ogg', 'sound/scp/firstpersonsnap3.ogg')
+	var/moff_horror_list = list('sound/scp/scare1.ogg', 'sound/scp/scare2.ogg', 'sound/scp/scare3.ogg', 'sound/scp/scare4.ogg')
+	attack_verb = list("flutters", "flaps")
 
 /obj/item/toy/plush/moth/attack_self(mob/living/user)
 	if(!COOLDOWN_FINISHED(src, last_hug_time))
 		return
+	user.visible_message(SPAN_NOTICE("[capitalize(user.declent_ru(NOMINATIVE))] крепко обнимает [src.declent_ru(ACCUSATIVE)]!"), SPAN_NOTICE("Ты крепко обнимаешь [src.declent_ru(ACCUSATIVE)]."))
+	playsound(src, pick(moff_sound_list), 25, TRUE)
+	COOLDOWN_START(src, last_hug_time, 2.5 SECONDS)
+
+/obj/item/toy/plush/moth/strange
+	var/suicide_count = 0
+
+/obj/item/toy/plush/moth/strange/attack_self(mob/living/user)
+	if(!COOLDOWN_FINISHED(src, last_hug_time))
+		return
 
 	user.visible_message(
-		SPAN_WARNING("[capitalize(user.declent_ru(NOMINATIVE))] stares deeply into the eyes of [src]...")
+		SPAN_WARNING("[capitalize(user.declent_ru(NOMINATIVE))] заглядывает [src.declent_ru(DATIVE)] в глаза... что-то заглядывает в ответ...")
 	)
-	playsound(src, 'modular/moff/sound/moth_scream_moth.ogg', 50, TRUE)
-	if(!do_after(user, 2 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
+	playsound(src, pick(moff_sound_list), 35, TRUE)
+	if(!do_after(user, 2.5 SECONDS, INTERRUPT_ALL, BUSY_ICON_HOSTILE))
 		user.visible_message(
-			SPAN_NOTICE("[capitalize(user.declent_ru(NOMINATIVE))] decided life was worth living.")
+			SPAN_NOTICE("[capitalize(user.declent_ru(NOMINATIVE))] решает, что жизнь важнее обнимашек.")
 		)
 		return
 
 	suicide_count++
-
-	if(suicide_count < 3)
-		desc = "A plushie depicting an unsettling mothperson. After killing [suicide_count] [suicide_count == 1 ? "person" : "people"] it's not looking so huggable now..."
-	else
-		desc = "A plushie depicting a creepy mothperson. It's killed [suicide_count] people! I don't think I want to hug it any more!"
-
-	user.visible_message(
-		SPAN_HIGHDANGER("[capitalize(user.declent_ru(NOMINATIVE))] hugs [src] tightly as it begins consuming [user.p_them()]!")
-	)
-
 	var/datum/cause_data/cause_data = create_cause_data("suicide by [initial(name)]", user)
 	user.last_damage_data = cause_data
-	playsound(src, 'modular/moff/sound/wail.ogg', 50, TRUE)
+
+	if(suicide_count < 3)
+		desc = "Плюшевая игрушка, изображающая странного человека-мотылька. После того как она погубила [suicide_count] [suicide_count == 1 ? "человека" : "людей"], её уже не назовёшь такой уж милой..."
+	else if(suicide_count < 4)
+		desc = "Плюшевая игрушка, изображающая нечто в облике человека-мотылька. Она погубила [suicide_count] людей. Не стоит смотреть ей в глаза слишком долго..."
+	else
+		user.visible_message(
+			SPAN_HIGHDANGER("[src.declent_ru(NOMINATIVE)] вспыхивает ярким пламенем!")
+		)
+		playsound(src, 'modular/moff/sound/moth_scream_moth.ogg', 30, TRUE)
+		var/turf/T = get_turf(src)
+		var/datum/reagent/napalm/ut/R = new()
+		R.durationfire = BURN_TIME_INSTANT
+		new /obj/flamer_fire(T, cause_data, R, 0)
+		qdel(src)
+		return
+
+	user.visible_message(
+		SPAN_HIGHDANGER("[capitalize(user.declent_ru(NOMINATIVE))] крепко обнимает [src.declent_ru(ACCUSATIVE)] и та начинает пожирать [user.ru_p_them()]!")
+	)
+	playsound(src, pick(moff_kill_list), 30, TRUE)
+	playsound(src, pick(moff_horror_list), 30, TRUE)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		var/obj/limb/L = H.get_limb("head")
+		if(L)
+			L.droplimb(cause_data)
 	user.death(cause_data)
 
-	COOLDOWN_START(src, last_hug_time, 3.5 SECONDS)
+	COOLDOWN_START(src, last_hug_time, 2.5 SECONDS)
