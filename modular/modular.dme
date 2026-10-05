@@ -40,5 +40,6 @@
 #include "shield/_shield.dme"
 #include "balance/_balance.dme"
 #include "emojis220/_emojis.dme"
+#include "automapper/_automapper.dme"
 #include "yaut_leap/_leap.dme"
 #include "necoarc/_arc.dme"

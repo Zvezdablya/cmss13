@@ -9,4 +9,5 @@
 #include "code/defines/subsystems.dm"
 #include "code/defines/xenos.dm"
 #include "code/defines/vehicles.dm"
+#include "code/defines/automapper.dm"
 #include "code/signals_mob/signals_mob_carbon.dm"
