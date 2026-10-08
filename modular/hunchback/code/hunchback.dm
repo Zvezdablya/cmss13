@@ -19,7 +19,7 @@
 /datum/xeno_strain/hunchback/apply_strain(mob/living/carbon/xenomorph/runner/runner)
 	runner.armor_modifier += XENO_ARMOR_TIER_1
 	runner.health_modifier += XENO_HEALTH_TIER_1 - XENO_HEALTH_RUNNER
-	runner.speed_modifier += 3.25
+	runner.speed_modifier += 6.5
 	runner.icon = 'modular/hunchback/icon/runner.dmi'
 	runner.icon_xeno = 'modular/hunchback/icon/runner.dmi'
 	runner.icon_xenonid = 'modular/hunchback/icon/runner.dmi'
@@ -91,7 +91,7 @@
 	if(!pounceAction)
 		return
 
-	pounceAction.xeno_cooldown = 2 SECONDS
+	pounceAction.xeno_cooldown = 2.2 SECONDS
 	pounceAction.apply_cooldown()
 	pounceAction.xeno_cooldown = 0
 
