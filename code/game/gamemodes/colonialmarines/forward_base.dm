@@ -9,7 +9,8 @@
 /datum/game_mode/colonialmarines/forward_base
 	name = GAMEMODE_FORWARD_BASE
 	config_tag = GAMEMODE_FORWARD_BASE
-	votable = FALSE
+	votable = TRUE
+	max_players = 85
 	var/hive_pylon_timer
 	var/hive_pylons_charged = FALSE
 
@@ -58,16 +59,21 @@
 		if(console.linked_lz && istype(get_area(console), /area/forward_base))
 			active_lz = console
 			break
-	for(var/area/forward_base/bunker_area in GLOB.all_areas)
-		bunker_area.flags_area |= AREA_NOBURROW
 	for(var/obj/effect/landmark/lv624/fog_blocker/fog in GLOB.landmarks_list)
 		fog.time_to_dispel = FORWARD_BASE_FOG_DURATION
 
 /datum/game_mode/colonialmarines/forward_base/post_setup()
 	. = ..()
+	var/datum/tech/arc/arc_tech = SStechtree.trees[TREE_MARINE]?.get_node(/datum/tech/arc)
+	if(arc_tech)
+		arc_tech.supply_pack_type = /datum/supply_packs/arc_components
+		arc_tech.name = "ARC Components"
+		arc_tech.node.name = arc_tech.name
+		arc_tech.desc = "Purchases the components needed for the broken ARC in the base garage. Components are delivered through ASRS."
+		arc_tech.announce_name = "ARC COMPONENTS AUTHORIZED"
+		arc_tech.announce_message = "Replacement components for the base's ARC have been authorized and will be delivered through ASRS."
 	if(GLOB.almayer_orbital_cannon)
 		COOLDOWN_START(GLOB.almayer_orbital_cannon, ob_firing_cooldown, FORWARD_BASE_FOG_DURATION - ROUND_TIME)
-	addtimer(CALLBACK(src, PROC_REF(allow_base_burrowing)), FORWARD_BASE_FOG_DURATION - ROUND_TIME)
 	addtimer(CALLBACK(src, PROC_REF(disable_base_comms)), FORWARD_BASE_FOG_DURATION + FORWARD_BASE_COMMS_FAILURE - ROUND_TIME)
 	addtimer(CALLBACK(src, PROC_REF(warn_resin_clear)), FORWARD_BASE_FOG_DURATION - ROUND_TIME)
 	addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(xeno_announcement), "The mist is almost gone. In one minute, the tallhosts will be exposed. Gather yourselves and prepare to tear their nest apart.", "everything", QUEEN_MOTHER_ANNOUNCE), FORWARD_BASE_FOG_DURATION - FORWARD_BASE_FOG_WARNING - ROUND_TIME)
@@ -77,13 +83,8 @@
 	for(var/obj/structure/machinery/computer/shuttle/dropship/flight/console in GLOB.machines)
 		console.time_lock = FORWARD_BASE_FOG_DURATION
 
-/datum/game_mode/colonialmarines/forward_base/proc/allow_base_burrowing()
-	for(var/area/forward_base/bunker_area in GLOB.all_areas)
-		if(!(initial(bunker_area.flags_area) & AREA_NOBURROW))
-			bunker_area.flags_area &= ~AREA_NOBURROW
-
 /datum/game_mode/colonialmarines/forward_base/proc/disable_base_comms()
-	marine_announcement("WARNING. BASE RELAY BACKUP BATTERY DEPLETED. Military radio coverage is offline. Recommended action: hijack a civilian communications tower and reestablish contact through the colony network.", "BASE COMMUNICATIONS ALERT", 'sound/AI/commandreport.ogg')
+	marine_announcement("WARNING. BASE RELAY BACKUP BATTERY DEPLETED. Military radio coverage is offline. Recommended action: activate a civilian communications tower to restore communications through the colony network.", "BASE COMMUNICATIONS ALERT", 'sound/AI/commandreport.ogg')
 	for(var/obj/structure/machinery/telecomms/relay/preset/tower/all/relay in GLOB.telecomms_list)
 		if(istype(get_area(relay), /area/forward_base))
 			relay.toggled = FALSE
@@ -112,10 +113,17 @@
 			if(is_ground_level(human_turf?.z))
 				groundside_humans++
 		if(groundside_humans < main_hive.get_real_total_xeno_count() * HIJACK_RATIO_FOR_TACMAP)
+			GLOB.enter_allowed = FALSE
 			main_hive.see_humans_on_tacmap = TRUE
 			main_hive.tacmap_requires_queen_ovi = FALSE
 			SEND_SIGNAL(main_hive, COMSIG_XENO_REVEAL_TACMAP)
 			xeno_announcement("There is only a handful of tallhosts left, they are now visible on our hive mind map.", XENO_HIVE_NORMAL, SPAN_ANNOUNCEMENT_HEADER_BLUE("[QUEEN_MOTHER_ANNOUNCE]"))
+	if(main_hive.see_humans_on_tacmap)
+		for(var/mob/living/carbon/human/human as anything in GLOB.alive_human_list)
+			if(isturf(human.loc) && !istype(human.buckled, /obj/structure/bed/nest) && istype(get_area(human), /area/forward_base))
+				return ..()
+		round_finished = MODE_INFESTATION_X_MAJOR
+		return
 	return ..()
 
 /obj/structure/machinery/defenses/sentry/premade/deployable/colony/landing_zone/forward_base
